@@ -1,0 +1,154 @@
+.photo_up{
+	background-image: url(../images/Icon/photo_up.png) !important;
+}
+.photo_down{
+	background-image: url(../images/Icon/photo_down.png) !important;
+}
+.printer_16{
+	background-image: url(../images/Icon/printer.png) !important;
+}
+.detail_16{
+	background-image: url(../images/Icon/detail_16.png) !important;
+}
+.ok_16{
+	background-image: url(../images/Icon/ok.png) !important;
+}
+.download_16{
+	background-image: url(../images/Icon/download.png) !important;
+}
+.headerbg{
+	background-image: url(../images/system/bg.png) !important;
+}
+.centerbg{
+	background-image: url(../images/wallpaper/default.jpg) !important;
+}
+.logoImg{
+	background-image: url(../images/system/mainlogo.png) !important;
+}
+.forward_32{
+	background-image: url(../images/Icon/forward_32.png) !important;
+}
+.refresh_32{
+	background-image: url(../images/Icon/refresh_32.png) !important;
+}
+.pwdset_32{
+	background-image: url(../images/Icon/pwdset_32.png) !important;
+}
+.exit_32{
+	background-image: url(../images/Icon/exit_32.png) !important;
+}
+.clock_24{
+	background-image: url(../images/Icon/clock_24.png) !important;
+}
+.add_16{
+	background-image: url(../images/Icon/add_16.png) !important;
+}
+.edit_16{
+	background-image: url(../images/Icon/edit_16.png) !important;
+}
+.delete_16{
+	background-image: url(../images/Icon/delete_16.png) !important;
+}
+.excel_16{
+	background-image: url(../images/Icon/excel_16.png) !important;
+}
+.home_16 {
+	background-image: url(../images/Icon/home_16.png) !important;
+}
+.pwd_16 {
+	background-image: url(../images/Icon/pwd_16.png) !important;
+}
+.save_16{
+	background-image: url(../images/Icon/save_16.gif) !important;
+}
+.return_16{
+	background-image: url(../images/Icon/return_16.png) !important;
+}
+.user_16{
+	background-image: url(../images/Icon/user_16.png) !important;
+}
+.clerk_16{
+	background-image: url(../images/Icon/clerk_16.png) !important;
+}
+.students_16{
+	background-image: url(../images/Icon/students_16.png) !important;
+}
+.role_16{
+	background-image: url(../images/Icon/role_16.png) !important;
+}
+.assign_16{
+	background-image: url(../images/Icon/assign_16.png) !important;
+}
+.system_16 {
+	 background-image: url(../images/Icon/system_16.png) !important;
+}
+.courses_16 {
+	 background-image: url(../images/Icon/courses_16.png) !important;
+}
+.calendar_16 {
+	 background-image: url(../images/Icon/calendar_16.png) !important;
+}
+.folder_16 {
+	 background-image: url(../images/Icon/folder_16.png) !important;
+}
+.other_16 {
+	 background-image: url(../images/Icon/other_16.png) !important;
+}
+.title_16 {
+	 background-image: url(../images/Icon/title_16.png) !important;
+}
+.rightArrow{
+    background-image: url(../images/Icon/rightArrow.png) !important;
+}
+.rightArrow2{
+    background-image: url(../images/Icon/rightArrow2.png) !important;
+}
+.leftArrow{
+    background-image: url(../images/Icon/leftArrow.png) !important;
+}
+.leftArrow2{
+    background-image: url(../images/Icon/leftArrow2.png) !important;
+}
+.topArrow{
+    background-image: url(../images/Icon/topArrow.png) !important;
+}
+.topArrow2{
+    background-image: url(../images/Icon/topArrow2.png) !important;
+}
+.downArrow{
+    background-image: url(../images/Icon/downArrow.png) !important;
+}
+.downArrow2{
+    background-image: url(../images/Icon/downArrow2.png) !important;
+}
+.export{
+    background-image: url(../images/Icon/export.png) !important;
+}
+.export_excel{
+    background-image: url(../images/Icon/export_excel.png) !important;
+}
+.searchForm{
+    background-image: url(../images/Icon/searchForm.png) !important;
+}
+.search{
+    background-image: url(../images/Icon/search.png) !important;
+}
+.searchAll{
+    background-image: url(../images/Icon/searchall.png) !important;
+}
+.advancedSearch{
+    background-image: url(../images/Icon/advancedsearch.png) !important;
+}
+.coper_16 {
+	 background-image: url(../images/Icon/coper_16.png) !important;
+}
+.rss_delete{
+	background-image: url(../images/Icon/rss_delete.gif) !important;
+}
+
+.readOnly input{
+	background:none; border : 0;border-bottom: #b5b8c8 1px solid;
+}
+.readOnly textarea{
+	background:none; border : 0;border-bottom: #b5b8c8 1px solid;
+}

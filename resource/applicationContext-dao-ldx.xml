@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	  <bean id="ViewJxXsxkallDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.ViewJxXsxkall</value>  
+   	    </constructor-arg>  
+    </bean>
+	   <bean id="ViewXwKtbgsqDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.ViewXwKtbgsq</value>  
+   	    </constructor-arg>  
+    </bean>
+    <bean id="XwKtbgsqbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.XwKtbgsqb</value>  
+   	    </constructor-arg>  
+    </bean>
+     <bean id="XwKtbgzbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKtbgzb</value>  
+        </constructor-arg>  
+    </bean>  
+     <bean id="XwKtbgzlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKtbgzlb</value>  
+        </constructor-arg>  
+    </bean>
+     <bean id="ViewXwKtbgzlzbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewXwKtbgzlzb</value>  
+        </constructor-arg>  
+    </bean>
+    <bean id="ZdFwqbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ZdFwqb</value>  
+        </constructor-arg>  
+    </bean>   
+    <bean id="JxKtbgsjbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.JxKtbgsjb</value>  
+        </constructor-arg>  
+    </bean>
+   <bean id="JxZqkhsjbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.JxZqkhsjb</value>  
+        </constructor-arg>  
+    </bean>
+    
+    
+      <bean id="XwKyjlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKyjlb</value>  
+        </constructor-arg>  
+    </bean> 
+    <bean id="XwKyjlzlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKyjlzlb</value>  
+        </constructor-arg>  
+    </bean> 
+    <bean id="ViewXwKyjlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewXwKyjlb</value>  
+        </constructor-arg>  
+    </bean> 
+
+ <bean id="XwKylwbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKylwb</value>  
+        </constructor-arg>  
+    </bean>
+    <bean id="XwKylwzlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKylwzlb</value>  
+        </constructor-arg>  
+    </bean>
+    <bean id="ViewXwKylwzbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewXwKylwzb</value>  
+        </constructor-arg>  
+    </bean>
+ <bean id="XwKyzlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKyzlb</value>  
+        </constructor-arg>  
+    </bean> 
+     <bean id="XwKyzlzlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKyzlzlb</value>  
+        </constructor-arg>  
+    </bean> 
+     <bean id="ViewXwKyzlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewXwKyzlb</value>  
+        </constructor-arg>  
+    </bean> 
+<bean id="XwKyzzbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKyzzb</value>  
+        </constructor-arg>  
+    </bean>
+    <bean id="XwKyzzzlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKyzzzlb</value>  
+        </constructor-arg>  
+    </bean>
+    <bean id="ViewXwKyzzbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewXwKyzzb</value>  
+        </constructor-arg>  
+    </bean> 
+    <!--  项目-->
+     <bean id="ViewXwKyxmbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewXwKyxmb</value>  
+        </constructor-arg>  
+    </bean>
+    <bean id="XwKyxmbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.XwKyxmb</value>  
+        </constructor-arg>  
+    </bean> 
+</beans>

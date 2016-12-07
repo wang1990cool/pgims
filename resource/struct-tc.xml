@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="tc" extends="base">
+		<action name="xsJcxxb*" class="edu.ahut.act.XsJcxxbAction"
+			method="{1}">
+			<result name="list" type="json">
+                <param name="root">result</param> 
+			</result>
+			<result name="success" type="json">
+				<param name="includeProperties">success</param>
+			</result>
+			<result name="delete" type="json">
+			     <param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="viewJxCjcx*" class="edu.ahut.act.ViewJxCjcxAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="getTreeData" class="edu.ahut.act.ZdXzqhmAction"
+			method="getTreeData">
+			<result name="success" type="json">
+				<param name="includeProperties">success,result.*</param>
+			</result>
+		</action>
+
+	</package>
+</struts>	

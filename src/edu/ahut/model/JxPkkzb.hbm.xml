@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="edu.ahut.model.JxPkkzb" table="JX_PKKZB" schema="PGDB">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="native"></generator>
+        </id>
+        <property name="xn" type="java.lang.String">
+            <column name="XN" length="9" />
+        </property>
+        <property name="xq" type="java.lang.String">
+            <column name="XQ" length="1" />
+        </property>
+        <property name="xqzs" type="java.lang.Integer">
+            <column name="XQZS" precision="5" scale="0" />
+        </property>
+        <property name="bz" type="java.lang.String">
+            <column name="BZ" length="400" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+Ext.define('App.model.jxkkjh.KKJHModel',{
+	extend:'Ext.data.Model',
+	fields:[
+		{name:'id'},{name:'kkjhh'},{name:'xn'},
+		{name:'xq'},{name:'pydwh'},{name:'pydw'},
+		{name:'xkzym'},{name:'xkzy'},{name:'nj'},
+		{name:'xslxm'},{name:'xslx'},{name:'pyccm'},{name:'pycc'},
+		{name:'jylbm'},{name:'jylb'},{name:'xwlbm'},{name:'xwlb'},
+		{name:'bbh'},{name:'pyfah'},{name:'pyfa'},
+		{name:'pyfsm'},{name:'pyfs'},{name:'jhrs'},{name:'ztm'},{name:'zt'},
+		{name:'bzrgh'},{name:'bzr'},{name:'bzsj'},{name:'shrgh'},{name:'shr'},
+		{name:'shjy'},{name:'shsj'},{name:'bz'}
+	]
+})

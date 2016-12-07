@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 系统管理 -->
+	<package name="sysmag" extends="base">
+		<action name="user*" class="edu.ahut.act.UserManagerAction"
+			method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="role*" class="edu.ahut.act.RoleManagerAction"
+			method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="right*" class="edu.ahut.act.RoleManagerAction"
+			method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="tree" type="json">
+				<param name="root">result.list</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="document" extends="json-default">
+		<action name="pfile*" class="edu.ahut.act.FileAction" method="{1}">
+			<result name="success" type="json">
+				<param name="contentType">text/html;charset=utf-8</param>
+				<param name="includeProperties">success,msg,fileResult.*,filePath</param>
+			</result>
+ 			<param name="uploadPath">PGFILE</param>
+			<param name="fileSize">10485670</param>
+		</action>
+	</package>
+</struts>	

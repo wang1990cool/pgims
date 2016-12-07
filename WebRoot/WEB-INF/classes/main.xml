@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="main" extends="base">
+		<!-- 登录界面 -->
+		<action name="index" class="edu.ahut.act.MainAction" method="index">
+			<result name="index" type="dispatcher">
+				/WEB-INF/content/login/Login.jsp
+			</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<!-- 主界面 -->
+		<action name="main" class="edu.ahut.act.MainAction" method="main">
+			<result name="main" type="dispatcher">
+				/WEB-INF/content/main/Main.jsp
+			</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+			
+		<!-- 系统登录 -->
+		<action name="login" class="edu.ahut.act.MainAction" method="login">
+			<result name="login" type="dispatcher">
+				/WEB-INF/content/login/Login.jsp
+			</result>
+			
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<!-- 系统退出 -->
+		<action name="exit" class="edu.ahut.act.MainAction" method="exit">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<!-- 树形菜单 -->
+		<action name="getMenus" class="edu.ahut.act.RoleManagerAction" method="getWebMenus">
+			<result name="success" type="json">
+				<param name="root">result.list</param>
+			</result>
+		</action>
+		
+		<!--字典管理  -->
+		<action name="zd*" class="edu.ahut.act.ZdUtilAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+	</package>
+</struts>

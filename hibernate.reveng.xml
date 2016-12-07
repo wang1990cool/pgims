@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+
+
+	<table name="systeminfo" catalog="test"
+		class="com.sshbase.model.Systeminfo">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="web_menu" catalog="test" class="Web_Menu">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="_web_usergroup" catalog="test" class="Web_UserGroup">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="_web_role" catalog="test" class="Web_Role">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="web_right" catalog="test" class="Web_Right">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="web_user" catalog="test" class="web_UserTest">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="PY_GRJHKCB" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_XS_JCXX" schema="PGDB">
+		<primary-key>
+			<generator class="assigned"></generator>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_PY_GRJH" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_XK_DWXKZY" schema="PGDB">
+		<primary-key>
+
+
+			<key-column name="ID" />
+		</primary-key>
+		<column name="DWH"></column>
+		<column name="ZYDM"></column>
+	</table>
+	<table name="VIEW_XK_DWXKB" schema="PGDB">
+		<primary-key>
+
+
+
+			<key-column name="ID" />
+		</primary-key>
+		<column name="ZYDM"></column>
+
+		<column name="DWH"></column>
+	</table>
+	<table name="VIEW_XX_DW" schema="PGDB">
+		<primary-key>
+			<key-column name="DWH" />
+		</primary-key>
+	</table>
+	<table name="VIEW_FAKC_KCK" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_JX_SKXXMX" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="JX_SKJHGXB" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="AUDIT_FLOW" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_USER_ROLE" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="AUDIT_DETAIL" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="PY_FAKCB" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="JX_ZXKKJHB" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_ZXKKJH_PK" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_PYFA_FILETYPE" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_PYFA_FAKC" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_XX_DWXX" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_KKJH_KKJHMX" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_PKJL_PK" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_SKXX_PK" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_JX_CJCX" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_XW_KTBGSQ" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_XW_ZQKH" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_XX_KZPJSB" schema="PGDB">
+		<primary-key>
+			<key-column name="ID" />
+		</primary-key>
+	</table>
+	<table name="VIEW_YX_BDQK" schema="PGDB">
+		<primary-key>
+			<key-column name="LQXY" />
+		</primary-key>
+	</table>
+	<table name="VIEW_YX_FYJNQK" schema="PGDB">
+		<primary-key>
+			<key-column name="LQXY" />
+		</primary-key>
+	</table>
+<table name="VIEW_JX_CJCX_ALL" schema="PGDB">
+	<primary-key>
+		<key-column name="ID" />
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

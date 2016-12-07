@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="ldx1" extends="base">
+		<action name="viewJxXsxkall*" class="edu.ahut.act.ViewJxXsxkallAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="viewXwKtbgsq*" class="edu.ahut.act.ViewXwKtbgsqAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="xwKtbgsqb*" class="edu.ahut.act.XwKtbgsqbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="xwKtbgzb*" class="edu.ahut.act.XwKtbgzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="xwKtbgzlb*" class="edu.ahut.act.XwKtbgzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pfileDownloadKtbg" type="chain">pfileDownloadKtbg</result>
+		</action>
+		<action name="viewXwKtbgzlzb*" class="edu.ahut.act.ViewXwKtbgzlzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="jxKtbgsjb*" class="edu.ahut.act.JxKtbgsjbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">success,msg,result.*</param>
+			</result>
+		</action> 
+		<action name="jxZqkhsjb*" class="edu.ahut.act.JxZqkhsjbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">success,msg,result.*</param>
+			</result>
+		</action>
+		
+		
+		 <action name="xwKyjlb*" class="edu.ahut.act.XwKyjlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*,kyuuid</param>
+			</result>
+		</action> 
+		<action name="xwKyjlzlb*" class="edu.ahut.act.XwKyjlzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pfileDownloadJl" type="chain">pfileDownloadJl</result>
+		</action>
+		<action name="viewXwKyjlb*" class="edu.ahut.act.ViewXwKyjlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action> 
+<action name="xwKylwb*" class="edu.ahut.act.XwKylwbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*,kyuuid</param>
+			</result>
+		</action> 
+		<action name="xwKylwzlb*" class="edu.ahut.act.XwKylwzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			
+			<result name="pfileDownloadKy" type="chain">pfileDownloadKy</result>
+		</action>
+		<action name="viewXwKylwzb*" class="edu.ahut.act.ViewXwKylwzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action> 
+		
+		 <action name="xwKyzlb*" class="edu.ahut.act.XwKyzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*,kyuuid</param>
+			</result>
+		</action> 
+		<action name="xwKyzlzlb*" class="edu.ahut.act.XwKyzlzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			
+			<result name="pfileDownloadZr" type="chain">pfileDownloadZr</result>
+		</action>
+		<action name="viewXwKyzlb*" class="edu.ahut.act.ViewXwKyzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action> 
+<action name="viewXwKyzzb*" class="edu.ahut.act.ViewXwKyzzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action> 
+		<action name="xwKyzzb*" class="edu.ahut.act.XwKyzzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*,kyuuid</param>
+			</result>
+		</action> 
+		<action name="xwKyzzzlb*" class="edu.ahut.act.XwKyzzzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			
+			<result name="pfileDownloadZz" type="chain">pfileDownloadZz</result>
+		</action>
+		<!--xiangmu  -->
+		<action name="xwKyxmb*" class="edu.ahut.act.XwKyxmbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action> 
+		<action name="viewXwKyxmb*" class="edu.ahut.act.ViewXwKyxmbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+	</package>
+</struts>	

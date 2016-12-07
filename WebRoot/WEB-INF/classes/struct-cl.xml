@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 人事管理 -->
+	<package name="RS" extends="base">
+		<!-- 导师信息 -->
+		<action name="viewRsDsxx*" class="edu.ahut.act.ViewRsDsxxAction"
+			method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">success,result.*</param>
+			</result> 
+		</action>
+		
+		<!-- 学生导师双选 -->
+		<action name="xsDsGx*" class="edu.ahut.act.XsDsGxAction"
+			method="{1}">
+			<result name="list" type="json">
+                <param name="root">result</param> 
+			</result>
+			<result name="success" type="json">
+				<param name="includeProperties">success,result.*</param>
+			</result> 
+		</action>
+		
+		<action name="xzqhm" class="edu.ahut.act.ZdXzqhmAction"
+			method="getTreeData">
+			<result name="success" type="json">
+				<param name="includeProperties">success,result.*</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>	

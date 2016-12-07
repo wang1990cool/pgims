@@ -1,0 +1,9 @@
+Ext.define('App.model.pygrjh.ViewXsJcxxModel',{
+	extend:'Ext.data.Model',
+	fields:[
+		{name:'id'},{name:'xh'},{name:'xm'},{name:'nj'},{name:'yxsh'},{name:'fymc'},
+		{name:'zydm'},{name:'zymc'},{name:'pyccm'},{name:'jylbm'},
+		{name:'xwlb'},{name:'jylb'},{name:'xwlbm'},{name:'pycc'},
+		{name:'xslx'},{name:'xslxm'},{name:'dsh'},{name:'dsxm'}
+	]
+})

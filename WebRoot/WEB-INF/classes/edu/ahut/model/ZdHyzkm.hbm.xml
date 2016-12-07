@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.ahut.model.ZdHyzkm" table="ZD_HYZKM" schema="PGDB">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <property name="hyzkm" type="string">
+            <column name="HYZKM" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="hyzk" type="string">
+            <column name="HYZK" length="20" />
+        </property>
+        <property name="pxh" type="double">
+            <column name="PXH" precision="0" />
+        </property>
+        <property name="sfyx" type="string">
+            <column name="SFYX" length="1" />
+        </property>
+        <property name="bz" type="string">
+            <column name="BZ" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		<description>泛型 Dao配置</description>  
+    
+	<!-- —————————————培养方案Begin———————————— -->
+	    <!-- 课程库总表 -->
+   <bean id="PyKckzbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.PyKckzb</value>  
+   	    </constructor-arg>  
+    </bean>
+    <!-- 培养方案总表 -->
+    <bean id="PyFazbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.PyFazb</value>  
+   	    </constructor-arg>  
+    </bean>
+    <!--培养方案课程  -->
+     <bean id="PyFakcbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.PyFakcb</value>  
+   	    </constructor-arg>  
+    </bean>
+    <!--单位信息 -->
+     <bean id="ViewXxDwxxDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.ViewXxDwxx</value>  
+   	    </constructor-arg>  
+    </bean>
+
+	<!-- —————————————培养方案End—————————————— -->
+	
+	<!-- —————————————个人计划begin————————————— -->
+	 	<!-- 个人计划总表 -->
+     <bean id="PyGrjhzbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.PyGrjhzb</value>  
+   	    </constructor-arg>  
+    </bean>
+    
+   <bean id="PyGrjhkcbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.PyGrjhkcb</value>  
+   	    </constructor-arg>  
+    </bean>
+    
+    	<!-- 学生基础信息视图 -->
+      <bean id="ViewXsJcxxDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.ViewXsJcxx</value>  
+   	    </constructor-arg>  
+    </bean>
+    
+    <!-- 个人计划信息视图 -->
+      <bean id="ViewPyGrjhDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.ViewPyGrjh</value>  
+   	    </constructor-arg>  
+    </bean>
+	
+	<!-- —————————————个人计划End—————————————— -->
+	
+	<!-- —————————————开课计划Begin————————————— -->
+	    <!-- 个人计划总表 -->
+      <bean id="JxKkjhzbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.JxKkjhzb</value>  
+   	    </constructor-arg>  
+    </bean>
+    
+    <bean id="JxKkjhmxbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.JxKkjhmxb</value>  
+   	    </constructor-arg>  
+    </bean>
+	
+    <bean id="XsXslxbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.XsXslxb</value>  
+   	    </constructor-arg>  
+    </bean>
+	
+	<!-- ——————————————开课计划End————————————— -->
+	
+	<!-- ——————————————课程任务安排Begin—————————— -->
+	<!-- 培养课程的显示 -->
+	<bean id="ViewJxSkxxmxDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.ViewJxSkxxmx</value>  
+   	    </constructor-arg>    
+    </bean>
+	
+  <bean id="JxSkxxbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.JxSkxxb</value>  
+   	    </constructor-arg>    
+    </bean>
+    
+    <bean id="JxSkjhgxbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.JxSkjhgxb</value>  
+   	    </constructor-arg>    
+    </bean>
+	
+	<bean id="JxZxkkjhbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.JxZxkkjhb</value>  
+   	    </constructor-arg>    
+    </bean>
+	
+	<!-- ——————————————课程任务安排End——————————— -->
+	<!--教工信息  -->
+	 <bean id="RsJgxxbDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.RsJgxxb</value>  
+   	    </constructor-arg>    
+    </bean>
+	
+	
+	<!-- 审批流程设置 -->
+	    <bean id="AuditFlowLinkDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.AuditFlowLink</value>  
+        </constructor-arg>  
+    </bean>
+    
+    	<!-- 总审批流程设置 -->
+	    <bean id="AuditFlowDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.AuditFlow</value>  
+        </constructor-arg>  
+    </bean>
+    
+     <!-- 教学单位 -->
+	   <bean id="ViewXxJxdwDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewXxJxdw</value>  
+        </constructor-arg>  
+    </bean>
+    
+         <!-- 教学单位 -->
+	   <bean id="AuditDetailDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.AuditDetail</value>  
+        </constructor-arg>  
+    </bean>
+    
+             <!-- 教学单位 -->
+	   <bean id="WebRightDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.WebRight</value>  
+        </constructor-arg>  
+    </bean>
+    
+     <bean id="ViewZxkkjhPkDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewZxkkjhPk</value>  
+        </constructor-arg>  
+    </bean>
+    
+       <bean id="DocumentDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.Document</value>  
+        </constructor-arg>  
+    </bean>
+    
+     <bean id="AttachDataDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.AttachData</value>  
+        </constructor-arg>  
+    </bean>
+    
+         <bean id="ViewPyfaFakcDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewPyfaFakc</value>  
+        </constructor-arg>  
+    </bean>
+    
+          <bean id="ViewKkjhKkjhmxDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewKkjhKkjhmx</value>  
+        </constructor-arg>  
+    </bean>
+    
+    <!-- 排课begin -->
+    
+   <bean id="JxPkjlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.JxPkjlb</value>  
+        </constructor-arg>  
+    </bean>
+    
+    <bean id="JxPkkzbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.JxPkkzb</value>  
+        </constructor-arg>  
+    </bean>
+    
+    
+      <bean id="TyXnbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.TyXnb</value>  
+        </constructor-arg>  
+    </bean>
+    
+      <bean id="XxKzpjsbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewXxKzpjsb</value>  
+        </constructor-arg>  
+    </bean>
+    
+          <bean id="ViewSkxxPkDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewSkxxPk</value>  
+        </constructor-arg>  
+    </bean>
+    
+          <bean id="ViewPkjlPkDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ViewPkjlPk</value>  
+        </constructor-arg>  
+    </bean>
+    
+    <!-- 排课end -->
+    
+    <!-- 授课资料 -->
+      <bean id="JxSkzlbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.JxSkzlb</value>  
+        </constructor-arg>  
+    </bean>
+    
+    <!-- 字典状态-->
+      <bean id="ZdZtmDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.ZdZtm</value>  
+        </constructor-arg>  
+    </bean>
+    
+     <bean id="JxPksjbDAO" parent="baseDAO">  
+        <constructor-arg>  
+            <value>edu.ahut.model.JxPksjb</value>  
+        </constructor-arg>  
+    </bean>
+</beans>

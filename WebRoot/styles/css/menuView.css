@@ -1,0 +1,123 @@
+.top-bar {
+    float: left;
+    height: 32px;
+    margin: 5px;
+    position: relative;
+    width: 32px;
+}
+.top-bar-bg {
+    display: block;
+    height: 32px;
+    text-decoration: none;
+    width: 32px;
+}
+.top-bar img {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    width: 30px;
+}
+.top-bar-over {
+    cursor: pointer;
+}
+.top-bar-wrap{
+	border:0px;
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 0px;
+}
+.top-bar-wrap span {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 0px;
+}
+.module-bar {
+    float: left;
+    height: 108px;
+    margin: 5px;
+    padding-left:0;
+    position: relative;
+    width: 108px;
+}
+.module-bar-bg {
+    display: block;
+    height: 108px;
+    text-decoration: none;
+    width: 108px;
+}
+.module-bar img {
+    height: 48px;
+    margin-left: 25px;
+    margin-right: auto;
+    margin-top: 18px;
+    text-align: center;
+    width: 48px;
+}
+.module-bar-over {
+    background: url("../images/system/module_bg.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+.module-bar-wrap{
+	border:0px;
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 0px;
+}
+.module-bar-wrap span {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 108px;
+}
+.module-text {
+    background: url("../images/system/module_text_bg.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    height: 21px;
+    margin-top: 2px;
+    text-align: center;
+    width: 100%;
+}
+.submodule-text {
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    height: 21px;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.bars {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}
+.bars span {
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    text-align: center;
+}
+.bar-view-over {
+    background-color: #EFEFEF;
+}
+.top-icon {
+    float: right;
+    margin: 5px;
+    padding: 5px;
+}
+.top-icon-over {
+    cursor: pointer;
+}
+.top-icon span {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="wc" extends="base">
+		<!-- 课程库 -->
+   		<action name="kck*" class="edu.ahut.act.PyKckzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="pyfa*" class="edu.ahut.act.PyFazbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*,pyfah,id</param>
+			</result>
+			<result name="pfileUpload" type="chain">pfileUpload</result>
+			<result name="pfileUploadAttach" type="chain">pfileUploadAttach</result>
+			<result name="pfileDeleteAttach" type="chain">pfileDeleteAttach</result>
+			<result name="pfileDownloadAttach" type="chain">pfileDownloadAttach</result>
+		</action>
+		
+	   <action name="fakc*" class="edu.ahut.act.PyFakcbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="dwxx*" class="edu.ahut.act.ViewXxDwxxAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="pygrjh*" class="edu.ahut.act.PyGrjhzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="grjhkc*" class="edu.ahut.act.PyGrjhkcbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="viewXsjcxx*" class="edu.ahut.act.ViewXsJcxxAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="viewPyGrjh*" class="edu.ahut.act.ViewPyGrjhAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="kkjh*" class="edu.ahut.act.JxKkjhzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="xslx*" class="edu.ahut.act.XsXslxbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<!-- 开课计划明细 -->
+		<action name="jhmx*" class="edu.ahut.act.JxKkjhmxbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<!-- 课程任务安排 -->
+		<action name="viewSkxxmx*" class="edu.ahut.act.ViewJxSkxxmxAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>	
+		
+		<!-- 授课信息管理 -->
+		<action name="skxx*" class="edu.ahut.act.JxSkxxbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>	
+		
+		<!-- 授课计划关系 -->
+		<action name="skjhgx*" class="edu.ahut.act.JxSkjhgxbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>	
+		
+		<!-- 教工信息-->
+		<action name="jgxx*" class="edu.ahut.act.RsJgxxbAction" method="{1}">
+			<result name="list" type="json">
+                <param name="root">result</param> 
+			</result>
+			<result name="success" type="json">
+				<param name="includeProperties">success,result.*</param>
+			</result> 
+			<result name="delete" type="json">
+				<param name="includeProperties">result.*</param>
+			</result> 
+			<result name="getxnjg" type="json">
+				<param name="includeProperties">result.*</param>
+			</result> 
+		</action>
+		
+		<action name="flowLink*" class="edu.ahut.act.AuditFlowLinkAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">success,msg,result.*</param>
+			</result>
+		</action>
+		
+		<action name="auditFlow*" class="edu.ahut.act.AuditFlowAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">success,msg,result.*</param>
+			</result>
+		</action>
+		
+		<action name="viewXxJxdw*" class="edu.ahut.act.ViewXxJxdwAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="auditDetail*" class="edu.ahut.act.AuditDetailAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="zxkkjh*" class="edu.ahut.act.JxZxkkjhbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="viewZxkkjhPk*" class="edu.ahut.act.ViewZxkkjhPkAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="duc*" class="edu.ahut.act.DocumentAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+			<action name="attach*" class="edu.ahut.act.AttachDataAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+			<action name="jxPkjl*" class="edu.ahut.act.JxPkjlAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="kzpjs*" class="edu.ahut.act.XxKzpjsbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+			<!--  授课资料管理-->	
+		<action name="skzl*" class="edu.ahut.act.JxSkzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pfileUploadZl" type="chain">pfileUploadZl</result>
+			<result name="pfileDeleteZl" type="chain">pfileDeleteZl</result>
+			<result name="pfileDownloadZl" type="chain">pfileDownloadZl</result> 
+		</action>
+		
+		<action name="zt*" class="edu.ahut.act.ZdZtmAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="viewSkxxPk*" class="edu.ahut.act.ViewSkxxPkAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="viewPkjlPk*" class="edu.ahut.act.ViewPkjlPkAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="jxPksj*" class="edu.ahut.act.JxPksjAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+	</package>
+</struts>	

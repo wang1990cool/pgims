@@ -1,0 +1,409 @@
+Ext.define('App.view.yx.YxXsjbxxList',{
+	extend: 'Ext.grid.Panel',
+	alias: 'widget.yxXsjbxxList',
+	
+	store: 'YxXsjbxxbStore',
+	columnLines: true,
+    title: '新生基本信息',
+    
+    frame: true,
+    loadMask: true,
+    viewConfig: { stripeRows: true },
+    stripeRows: true,
+    selModel: {  
+        selType:'checkboxmodel'  
+    }, 
+	
+	initComponent:function() {
+		var me = this;
+		
+		var exportCols = {
+			  id:'序号',nj:'年级',zkzh:'准考证号',bmh:'报名号',xh:'学号',sftms:'是否推免生',sfyzy:'是否一志愿',zsbh:'证书编号',xm:'姓名',zxf:'总学费',
+			  dyxnxf:'第一学年学费',xz:'学制',jcf:'教材费',zsf:'住宿费',tjf:'体检费',yktf:'一卡通费',ylbxf:'医疗保险费',
+			  hj:'合计',lqxym:'录取学院码',lqxy:'录取学院',lqzym:'录取专业码',lqzy:'录取专业',bddd:'报到地点',xmpy:'姓名拼音',
+              xb:'性别',jgdm:'籍贯地码',jgd:'籍贯所在地',hf:'婚否',zjlx:'证件类型',sfzh:'身份证号',csrq:'出生日期',csdm:'出生地码',csd:'出生所在地',
+              hkdm:'户口地码',hkd:'户口所在地',hkdz:'户口地址',dadm:'档案地码', dad:'档案所在地',dadw:'档案单位',dadz:'档案地址',dayb:'档案编码',
+              gzdw:'工作单位',gzjl:'工作简历',jcqk:'奖惩情况',jtcy:'家庭成员',txdz:'通讯地址',txyb:'通讯邮编',lxdh:'联系电话',
+              yddh:'移动电话',dzxx:'电子邮箱',ksly:'考生来源',bbydw:'本毕业单位',bbyzy:'本毕业专业',bkbyny:'本科毕业年月', 
+              xlm:'学历码',xl:'学历',xwm:'学位码',xw:'学位',mz:'民族',zzmm:'政治面貌',lqlb:'录取类别',rxfsm:'入学方式码',rxfs:'入学方式',
+              zp:'照片',bz:'备注',bdztm:'报到状态',xslxm:'学生类型码',xslx:'学生类型'
+		};
+		
+		Ext.applyIf(me,{
+			listeners:{
+		        cellClick: function(thisTab, td, cellIndex,rec,tr,rowIndex,event,eventObj) {
+		        	var edit = event.getTarget('edit');
+		        	 var btn = event.getTarget('.controlBtn');  
+		             if(btn){
+		             	var t = event.getTarget();
+		             	var control = t.className;
+		             	switch(control){
+		             		case 'edit':{
+		             			var bdztm = rec.get('bdztm');
+		             			
+					    		Ext.MessageBox.confirm('修改', '确定要修改所选记录的报到状态吗？', function(btn) {
+									if (btn == 'yes') {
+										var xsJson = {};		
+										var jsonObject = JSON.parse(Ext.encode(rec.data));
+										for(var item in jsonObject){
+											xsJson[item] = jsonObject[item];
+										}
+										if(bdztm == '1'){
+										     xsJson['bdztm'] = '0';
+//											xsJson['bdztm'] = null;
+										}else{
+											 xsJson['bdztm'] = '1';
+										}
+										
+										Ext.Ajax.request({
+											url : 'yxXsjbxxEditZt.action',
+											waitTitle : '提示',
+											actionMethods : 'post',
+											params:{datas:Ext.encode(xsJson)},
+											waitMsg : '正在修改数据请稍候...',
+											success : function(response, opts) {
+												var result = Ext.decode(response.responseText);
+												var success = result.result.success;
+												if(success){
+													var msg = "修改成功！";
+													Ext.MessageBox.show({
+											           title: '提示',
+											           msg: msg,
+											           buttons: Ext.MessageBox.OK,
+											           icon: Ext.MessageBox.INFO,
+											           fn: function(id, msg){
+											        	  Ext.StoreMgr.lookup('YxXsjbxxbStore').reload();
+													    }
+											        });
+												}else{
+													var errmsg = "修改失败！";
+													Ext.MessageBox.show({
+											           title: '错误',
+											           msg: errmsg,
+											           buttons: Ext.MessageBox.OK,
+											           icon: Ext.MessageBox.ERROR,
+											           fn: function(id, msg){  
+													    }  
+											        });
+												}
+											},
+											failure : function(form, action) {
+												var errmsg = "提交失败！";
+												 Ext.MessageBox.show({
+										           title: '错误',
+										           msg: errmsg,
+										           buttons: Ext.MessageBox.OK,
+										           icon: Ext.MessageBox.ERROR,
+										           fn: function(id, msg){  
+												    }  
+										       });
+											}
+										});
+									}
+								})
+
+//				            		Ext.create('Ext.window.Window',{
+//										alias: 'widget.EditBdZtWin',
+//										iconCls:'add_16',
+//										layout:'fit',
+//										width:380,
+//										closeAction:'destroy',
+//										height:180,
+//										resizable:false,
+//										shadow:true,
+//										autoShow:true,
+//										title:'修改报到状态',
+//										modal:true,
+//										closable:true,
+//										rec:rec,
+//										skzlList:me,
+//										bodyStyle:'padding:5 5 5 5',
+//										animCollapse:true,
+//										items: [
+//												Ext.create('App.view.yx.EditBdztForm',{
+//													itemId: 'editBdztForm'
+//												})
+//											]
+//									});
+								
+		             			break;
+		             		}
+		             	    
+		             	}
+		             }
+		        }
+    		 },
+			exportCols:exportCols,
+			columns: [
+				{ text: exportCols['id'], width:80, dataIndex: 'id', sortable:true,hidden:true},
+				{ text: exportCols['zkzh'], width:120, dataIndex: 'zkzh', sortable:true},
+				{ text: exportCols['xm'], width:70, dataIndex: 'xm', sortable:true},
+				{ text: exportCols['xh'], width:100, dataIndex: 'xh', sortable:true},
+				{ text:	exportCols['xb'],width: 50,dataIndex : 'xb', sortable:true},
+				{ text: exportCols['nj'],width:60, dataIndex: 'nj', sortable:true},
+				{ text: exportCols['sftms'],width:60, dataIndex: 'sftms', sortable:true,hidden:true},
+				{ text: exportCols['sfyzy'],width:60, dataIndex: 'sfyzy', sortable:true,hidden:true},
+				{ text: exportCols['lqxy'],width:200, dataIndex: 'lqxy', sortable:true},
+				{ text: exportCols['lqzy'],width:130, dataIndex: 'lqzy', sortable:true},
+				{ text: exportCols['lqlb'],width:100, dataIndex: 'lqlb', sortable:true},
+				{ text: exportCols['xslx'], width:130, dataIndex: 'xslx', sortable:true},
+				{ text: exportCols['bmh'], width:80, dataIndex: 'bmh', sortable:true,hidden:true},
+				{ text: exportCols['zsbh'], width:80, dataIndex: 'zsbh', sortable:true,hidden:true},
+				{ text: exportCols['xmpy'], width:80, dataIndex: 'xmpy', sortable:true,hidden:true},
+				{ text: exportCols['csrq'], width:80, dataIndex: 'csrq', sortable:true,hidden:true},
+				{ text: exportCols['zjlx'], width:80, dataIndex: 'zjlx', sortable:true,hidden:true},
+				{ text: exportCols['sfzh'], width:80, dataIndex: 'sfzh', sortable:true,hidden:true},
+				{ text: exportCols['xz'], width:80, dataIndex: 'xz', sortable:true,hidden:true},
+				{ text: exportCols['lqxym'], width:80, dataIndex: 'lqxym', sortable:true,hidden:true},
+				{ text: exportCols['lqzym'], width:80, dataIndex: 'lqzym', sortable:true,hidden:true},
+				{ text: exportCols['xslxm'], width:150, dataIndex: 'xslxm', sortable:true,hidden:true},
+				{ text: exportCols['rxfsm'], width:80, dataIndex: 'rxfsm', sortable:true,hidden:true},
+				{ text: exportCols['rxfs'], width:80, dataIndex: 'rxfs', sortable:true,hidden:true},
+				{ text: exportCols['bddd'], width:80, dataIndex: 'bddd', sortable:true,hidden:true},
+				{ text: exportCols['zzmm'], width:80, dataIndex: 'zzmm', sortable:true,hidden:true},
+				{ text: exportCols['mz'], width:80, dataIndex: 'mz', sortable:true,hidden:true},
+				{ text: exportCols['hf'], width:80, dataIndex: 'hf', sortable:true,hidden:true},
+				{ text: exportCols['jgdm'], width:80, dataIndex: 'jgdm', sortable:true,hidden:true},
+				{ text: exportCols['jgd'], width:80, dataIndex: 'jgd', sortable:true,hidden:true},
+				{ text: exportCols['csdm'], width:80, dataIndex: 'csdm', sortable:true,hidden:true},
+				{ text: exportCols['csd'], width:80, dataIndex: 'csd', sortable:true,hidden:true},
+				{ text: exportCols['hkdm'], width:80, dataIndex: 'hkdm', sortable:true,hidden:true},
+				{ text: exportCols['hkd'], width:80, dataIndex: 'hkd', sortable:true,hidden:true},
+				{ text: exportCols['hkdz'], width:80, dataIndex: 'hkdz', sortable:true,hidden:true},
+				{ text: exportCols['dadm'], width:80, dataIndex: 'dadm', sortable:true,hidden:true},
+				{ text: exportCols['dad'], width:80, dataIndex: 'dad', sortable:true,hidden:true},
+				{ text: exportCols['dadw'], width:80, dataIndex: 'dadw', sortable:true,hidden:true},
+				{ text: exportCols['dadz'], width:80, dataIndex: 'dadz', sortable:true,hidden:true},
+				{ text: exportCols['dayb'], width:80, dataIndex: 'dayb', sortable:true,hidden:true},
+				{ text: exportCols['gzdw'], width:80, dataIndex: 'gzdw', sortable:true,hidden:true},
+				{ text: exportCols['gzjl'], width:80, dataIndex: 'gzjl', sortable:true,hidden:true},
+				{ text: exportCols['jcqk'], width:80, dataIndex: 'jcqk', sortable:true,hidden:true},
+				{ text: exportCols['jtcy'], width:80, dataIndex: 'jtcy', sortable:true,hidden:true},
+				{ text: exportCols['txdz'], width:80, dataIndex: 'txdz', sortable:true,hidden:true},
+				{ text: exportCols['txyb'], width:80, dataIndex: 'txyb', sortable:true,hidden:true},
+				{ text: exportCols['lxdh'], width:80, dataIndex: 'lxdh', sortable:true,hidden:true},
+				{ text: exportCols['yddh'], width:80, dataIndex: 'yddh', sortable:true,hidden:true},
+				{ text: exportCols['dzxx'], width:80, dataIndex: 'dzxx', sortable:true,hidden:true},
+				{ text: exportCols['ksly'], width:80, dataIndex: 'ksly', sortable:true,hidden:true},
+				{ text: exportCols['bbydw'], width:80, dataIndex: 'bbydw', sortable:true,hidden:true},
+				{ text: exportCols['bbyzy'], width:80, dataIndex: 'bbyzy', sortable:true,hidden:true},
+				{ text: exportCols['bkbyny'], width:80, dataIndex: 'bkbyny', sortable:true,hidden:true},
+				{ text: exportCols['xlm'], width:80, dataIndex: 'xlm', sortable:true,hidden:true},
+				{ text: exportCols['xl'], width:80, dataIndex: 'xl', sortable:true,hidden:true},
+				{ text: exportCols['xwm'], width:80, dataIndex: 'xwm', sortable:true,hidden:true},
+				{ text: exportCols['xw'], width:80, dataIndex: 'xw', sortable:true,hidden:true},
+				{ text: exportCols['zxf'], width:80, dataIndex: 'zxf', sortable:true,hidden:true},
+				{ text: exportCols['dyxnxf'], width:80, dataIndex: 'dyxnxf', sortable:true,hidden:true},
+				{ text: exportCols['jcf'], width:80, dataIndex: 'jcf', sortable:true,hidden:true},
+				{ text: exportCols['zsf'], width:80, dataIndex: 'zsf', sortable:true,hidden:true},
+				{ text: exportCols['tjf'], width:80, dataIndex: 'tjf', sortable:true,hidden:true},
+				{ text: exportCols['yktf'], width:80, dataIndex: 'yktf', sortable:true,hidden:true},
+				{ text: exportCols['ylbxf'], width:80, dataIndex: 'ylbxf', sortable:true,hidden:true},
+				{ text: exportCols['hj'], width:80, dataIndex: 'hj', sortable:true,hidden:true},
+				{ text: exportCols['zp'], width:80, dataIndex: 'zp', sortable:true,hidden:true},
+				{ text: exportCols['bz'], width:80, dataIndex: 'bz', sortable:true,hidden:true},
+				{ text: exportCols['bdztm'], width:80, dataIndex: 'bdztm', sortable:true,renderer: function(value){
+		          	if(value == "1"){
+		          		return "已报到";
+//		          	}else if(value == "0"|| value == null){
+		          	}else if(value == "0" || value == null){
+		          		return "未报到";
+		          	}
+          	}},
+				
+				{text:'修改状态',width:70,sortable:false,
+			    renderer:function(value, cellmeta, record, rowIndex, columnIndex, store){
+//			    		 var editBtn = "<input class='edit', style='font-size:11px;height:21px' type='button' value='修改'>";
+			    		
+			    		 var bdztm = record.get('bdztm');
+			    		 if(bdztm == '1'){
+			    		 	var editBtn = "<input class='edit', style='font-size:11px;height:21px' type='button' value='未报到'>";
+			    		 }else {
+			    		 	var editBtn = "<input class='edit', style='font-size:11px;height:21px' type='button' value='已报到'>";
+			    		 }
+			    		 
+			    		 return "<div class='controlBtn' >" + editBtn + "</div>";
+			    		 }
+				 }
+				
+			],
+			
+			
+			dockedItems:[{
+            		dock: 'top',
+				    xtype: 'toolbar',
+				    items:[
+				    	{
+					    	text:'详情',
+					    	itemId:'detail',
+					    	iconCls:'detail_16',
+					    	action:'detail'
+					    }, '-', {
+							itemId : 'editBtn',
+							text : '修改',
+							tooltip : '修改',
+							iconCls : 'edit_16',
+							action : 'edit'
+						}, '-', {
+							itemId : 'addBtn',
+							text : '导入',
+							tooltip : '导入',
+							iconCls : 'add_16',
+							handler: function () {
+		                	var me = this;
+		                	Ext.MessageBox.confirm('提醒', '请先确认旧数据已转储且已清空旧数据！', function(btn) {
+								if (btn == 'yes') {
+							    	var win = new Ext.Window({
+							    		itemId:'yxXsjbxxbExcleWin',
+							    		autoShow: true,
+							    		title:'导入Excle',
+							    		iconCls:'add_16',
+							            layout: 'fit',
+							            width: 360,
+							            autoHeigth: true,
+							            closeAction:'destroy',
+							    		resizable:false,
+							    		shadow:true,
+							    		modal:true,
+							    		closable:true,
+							    		animCollapse:true,
+							    		autoShow:true,
+							            items: [Ext.create('App.view.yx.YxXsjbxxExcleUpForm')]
+							        });
+						        }
+							}, this);
+		                }
+						}, '-', {
+							itemId : 'eportBtn',
+							xtype : 'excelExport',
+							action : 'toExcel'
+						},'-', {
+							itemId : 'addZpBtn',
+							text : '照片导入',
+							tooltip : '照片导入',
+							iconCls : 'photo_up',
+							handler: function () {
+		                	var me = this;
+		                	var win = Ext.create('Ext.window.Window',{
+							    		itemId:'yxXsjbxxbZpWin',
+							    		autoShow: true,
+							    		title:'导入照片',
+							    		iconCls:'add_16',
+							            layout: 'fit',
+							            width: 360,
+							            autoHeigth: true,
+							            closeAction:'destroy',
+							    		resizable:false,
+							    		shadow:true,
+							    		modal:true,
+							    		closable:true,
+							    		animCollapse:true,
+							    		autoShow:true,
+							            items: [Ext.create('App.view.yx.YxXsjbxxZpUpForm')]
+							});
+		                }
+						},'-',{
+				            xtype: 'FileDownloader',
+				            itemId: 'fileDownloader',
+				            width: 0,
+				            height: 0
+		       			},{
+		       				itemId : 'toZpBtn',
+							text : '照片导出',
+							tooltip : '照片导出',
+							iconCls : 'photo_down',
+							handler: function (grid) {
+		            		var me = this;
+		                	var win = Ext.create('Ext.window.Window',{
+							    		itemId:'yxXsjbxxbZpWin1',
+							    		autoShow: true,
+							    		title:'导出照片',
+							    		iconCls:'add_16',
+							            layout: 'fit',
+							            width: 400,
+							            autoHeigth: true,
+							            closeAction:'destroy',
+							    		resizable:false,
+							    		shadow:true,
+							    		modal:true,
+							    		closable:true,
+							    		animCollapse:true,
+							    		autoShow:true,
+							            items: [Ext.create('App.view.yx.YxXsjbxxZpDownForm')]
+							});
+		            	}
+		       			}/*{
+							itemId : 'toZpBtn',
+							text : '照片导出',
+							tooltip : '照片导出',
+							iconCls : 'photo_down',
+							handler: function (grid) {
+		            		var downloader = this.up('grid').down('#fileDownloader');
+		            		downloader.load({
+		            			url: 'yxXsjbxxFileDownloadZp.action'
+		            		});
+		            	}
+//							action : 'toZp'
+						}*/,'-', {
+							itemId:'backupBtn',
+				            text:'转储',
+				            tooltip:'转储',
+				            iconCls:'save_16',
+				            action:'backupData'
+				 	}, '-', {
+							itemId:'deleteDataBtn',
+				            text:'清空',
+				            tooltip:'清空',
+				            iconCls:'rss_delete',
+				            action:'deleteData'
+				 	},'-',{
+							itemId : 'toDownBtn',
+							text : '导入模板下载',
+							tooltip : '导入模板下载',
+							iconCls : 'downArrow',
+							handler: function (grid) {
+		            		var downloader = this.up('grid').down('#fileDownloader');
+		            		downloader.load({
+		            			url: 'yxXsjbxxtoDownTemp.action'
+		            		});
+		            	}
+//							action : 'toDownTemp'
+						},'->', '-', {
+							itemId : 'schShowBtn',
+							iconCls : 'searchForm',
+							action : 'showSearch'
+						}, '-', '每页', {
+							itemId : 'numCmb',
+							name : 'numCmb',
+							xtype : 'combo',
+							width : 50,
+							blankText : '必须选择页面大小!',
+							store : Ext.StoreMgr.lookup('main.PageStore'),
+							value : pSize,
+							editable : false,
+							displayField : 'abbr',
+							valueField : 'value',
+							queryMode : 'local'
+						}, '条'
+				    ]},
+    		 Ext.create('Ext.PagingToolbar', {
+		        itemId:'toolbar',
+		        pageSize: pSize,
+		        dock: 'bottom',
+		        store:  me.store,
+		        displayInfo: true,
+		        displayMsg: '显示 {0} - {1} 条，共计 {2} 条',
+		        emptyMsg: '没有数据',
+		        plugins: Ext.create('Ext.ux.ProgressBarPager', {})
+		    })]
+        });
+        me.callParent(arguments);
+        }     	
+});
+
+
+
+
+
+
+

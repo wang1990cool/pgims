@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<!-- —————————————培养方案Begin———————————— -->
+	<!-- 课程库 -->
+	<bean id="PyKzkzbServiceImpl" class="edu.ahut.service.impl.PyKzkzbServiceImpl">
+		<property name="pyKckzbDao">
+			<ref bean="PyKckzbDAO"/>
+		</property>
+	</bean>
+	
+	<!-- 培养方案总表  -->
+	<bean id="PyFazbServiceImpl" class="edu.ahut.service.impl.PyFazbServiceImpl">
+		<property name="pyFazbDao">
+			<ref bean="PyFazbDAO"/>
+		</property>
+	</bean>
+	
+	<!-- 培养课程表表  -->
+	<bean id="PyFakcbServiceImpl" class="edu.ahut.service.impl.PyFakcbServiceImpl">
+		<property name="pyFakcbDao">
+			<ref bean="PyFakcbDAO"/>
+		</property>
+	</bean>
+	
+	<!-- 单位信息 -->
+	<bean id="ViewXxDwxxServiceImpl" class="edu.ahut.service.impl.ViewXxDwxxServiceImpl">
+		<property name="viewXxDwxxDao">
+			<ref bean="ViewXxDwxxDAO"/>
+		</property>
+	</bean>
+	
+	<!-- 字典Util -->
+	<bean id="ZdUtilServiceImpl" class="edu.ahut.service.impl.ZdUtilServiceImpl">
+		<property name="ZdUtilDao">
+			<ref bean="ZdUtilDAOImpl"/>
+		</property>
+	</bean>
+	<!-- —————————————培养方案End—————————————— -->
+	
+	<!-- —————————————个人计划begin————————————— -->
+	<bean id="PyGrjhzbServiceImpl" class="edu.ahut.service.impl.PyGrjhzbServiceImpl">
+		<property name="pyGrjhzbDao">
+			<ref bean="PyGrjhzbDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="PyGrjhkcbServiceImpl" class="edu.ahut.service.impl.PyGrjhkcbServiceImpl">
+		<property name="pyGrjhkcbDao">
+			<ref bean="PyGrjhkcbDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="ViewXsJcxxServiceImpl" class="edu.ahut.service.impl.ViewXsJcxxServiceImpl">
+		<property name="viewXsJcxxDao">
+			<ref bean="ViewXsJcxxDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="ViewPyGrjhServiceImpl" class="edu.ahut.service.impl.ViewPyGrjhServiceImpl">
+		<property name="viewPyGrjhDao">
+			<ref bean="ViewPyGrjhDAO"/>
+		</property>
+	</bean>
+	<!-- —————————————个人计划End—————————————— -->
+	
+	<!-- —————————————开课计划Begin————————————— -->
+	<bean id="JxKkjhzbServiceImpl" class="edu.ahut.service.impl.JxKkjhzbServiceImpl">
+		<property name="jxKkjhzbDao">
+			<ref bean="JxKkjhzbDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="XsXslxbServiceImpl" class="edu.ahut.service.impl.XsXslxbServiceImpl">
+		<property name="xsXslxbDao">
+			<ref bean="XsXslxbDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="JxKkjhmxbServiceImpl" class="edu.ahut.service.impl.JxKkjhmxbServiceImpl">
+		<property name="jxKkjhmxbDao">
+			<ref bean="JxKkjhmxbDAO"/>
+		</property>
+	</bean>
+	
+	<!-- ——————————————开课计划End————————————— -->
+	
+	<!-- ——————————————课程任务安排Begin———————————-->
+	<bean id="ViewJxSkxxmxServiceImpl" class="edu.ahut.service.impl.ViewJxSkxxmxServiceImpl">
+		<property name="viewJxSkxxmxDao">
+			<ref bean="ViewJxSkxxmxDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="JxSkxxbServiceImpl" class="edu.ahut.service.impl.JxSkxxbServiceImpl">
+		<property name="jxSkxxbDao">
+			<ref bean="JxSkxxbDAO"/>
+		</property>
+		<property name="jxSkjhgxbDao">
+			<ref bean="JxSkjhgxbDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="JxSkjhgxbServiceImpl" class="edu.ahut.service.impl.JxSkjhgxbServiceImpl">
+		<property name="jxSkjhgxbDao">
+			<ref bean="JxSkjhgxbDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="ViewZxkkjhPkServiceImpl" class="edu.ahut.service.impl.ViewZxkkjhPkServiceImpl">
+		<property name="viewZxkkjhPkDao">
+			<ref bean="ViewZxkkjhPkDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="JxZxkkjhbServiceImpl" class="edu.ahut.service.impl.JxZxkkjhbServiceImpl">
+		<property name="jxZxkkjhbDao">
+			<ref bean="JxZxkkjhbDAO"/>
+		</property>
+	</bean>
+	<!-- ——————————————课程任务安排End—————————— — -->
+	<!-- 教工信息 -->
+	 <bean id="RsJgxxbServiceImpl" class="edu.ahut.service.impl.RsJgxxbServiceImpl">
+		<property name="rsJgxxbDao">
+			<ref bean="RsJgxxbDAO"/>
+		</property>
+	</bean>
+	
+	<!-- 审批流程 -->
+     <bean id="AuditFlowLinkServiceImpl" class="edu.ahut.service.impl.AuditFlowLinkServiceImpl">
+		<property name="auditFlowLinkDao">
+			<ref bean="AuditFlowLinkDAO"/>
+		</property>
+	</bean>
+	
+		<!-- 总审批流程 -->
+     <bean id="AuditFlowServiceImpl" class="edu.ahut.service.impl.AuditFlowServiceImpl">
+		<property name="auditFlowDao">
+			<ref bean="AuditFlowDAO"/>
+		</property>
+	</bean>
+	
+	 <!-- 教学单位-->
+     <bean id="ViewXxJxdwServiceImpl" class="edu.ahut.service.impl.ViewXxJxdwServiceImpl">
+		<property name="viewXxJxdwDao">
+			<ref bean="ViewXxJxdwDAO"/>
+		</property>
+	</bean>
+	
+	 <!--审批记录详情 -->
+     <bean id="AuditDetailServiceImpl" class="edu.ahut.service.impl.AuditDetailServiceImpl">
+		<property name="auditDetailDao">
+			<ref bean="AuditDetailDAO"/>
+		</property>
+	</bean>
+	
+	 <bean id="WebRightServiceImpl" class="edu.ahut.service.impl.WebRightServiceImpl">
+		<property name="webRightDao">
+			<ref bean="WebRightDAO"/>
+		</property>
+	</bean>
+	
+	 <bean id="DocumentServiceImpl" class="edu.ahut.service.impl.DocumentServiceImpl">
+		<property name="documentDao">
+			<ref bean="DocumentDAO"/>
+		</property>
+	</bean>
+	
+		 <bean id="AttachDataServiceImpl" class="edu.ahut.service.impl.AttachDataServiceImpl">
+		<property name="attachDataDao">
+			<ref bean="AttachDataDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="ViewPyfaFakcServiceImpl" class="edu.ahut.service.impl.ViewPyfaFakcServiceImpl">
+		<property name="viewPyfaFakcDao">
+			<ref bean="ViewPyfaFakcDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="ViewKkjhKkjhmxServiceImpl" class="edu.ahut.service.impl.ViewKkjhKkjhmxServiceImpl">
+		<property name="viewKkjhKkjhmxDao">
+			<ref bean="ViewKkjhKkjhmxDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="TyXnbServiceImpl" class="edu.ahut.service.impl.TyXnbServiceImpl">
+		<property name="tyXnbDao">
+			<ref bean="TyXnbDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="JxPkjlbServiceImpl" class="edu.ahut.service.impl.JxPkjlbServiceImpl">
+		<property name="jxPkjlbDao">
+			<ref bean="JxPkjlbDAO"/>
+		</property>
+		<property name="jxPkkzbDao">
+			<ref bean="JxPkkzbDAO"/>
+		</property>
+		<property name="jxPksjbDao">
+			<ref bean="JxPksjbDAO"/>
+		</property>
+		<property name="jxSkxxbDao">
+			<ref bean="JxSkxxbDAO"/>
+		</property>
+		<property name="viewPkjlPkDao">
+			<ref bean="ViewPkjlPkDAO"/>
+		</property>
+		<property name="viewSkxxPkDao">
+			<ref bean="ViewSkxxPkDAO"/>
+		</property>
+		<property name="jxSkzlbDao">
+			<ref bean="JxSkzlbDAO"/>
+		</property>
+		
+		<property name="jxSkjhgxbDao">
+			<ref bean="JxSkjhgxbDAO"/>
+		</property>
+	</bean>
+	
+		<bean id="XxKzpjsbServiceImpl" class="edu.ahut.service.impl.XxKzpjsbServiceImpl">
+		<property name="xxKzpjsbDao">
+			<ref bean="XxKzpjsbDAO"/>
+		</property>
+	</bean>
+		<bean id="JxSkzlbServiceImpl" class="edu.ahut.service.impl.JxSkzlbServiceImpl">
+		<property name="jxSkzlbDao">
+			<ref bean="JxSkzlbDAO"/>
+		</property>
+	</bean>
+	
+		<bean id="ZdZtmServiceImpl" class="edu.ahut.service.impl.ZdZtmServiceImpl">
+		<property name="zdZtmDao">
+			<ref bean="ZdZtmDAO"/>
+		</property>
+	</bean>
+	<bean id="ViewSkxxPkServiceImpl" class="edu.ahut.service.impl.ViewSkxxPkServiceImpl">
+		<property name="viewSkxxPkDao">
+			<ref bean="ViewSkxxPkDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="ViewPkjlPkServiceImpl" class="edu.ahut.service.impl.ViewPkjlPkServiceImpl">
+		<property name="viewPkjlPkDao">
+			<ref bean="ViewPkjlPkDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="JxPksjbServiceImpl" class="edu.ahut.service.impl.JxPksjbServiceImpl">
+		<property name="jxPksjbDao">
+			<ref bean="JxPksjbDAO"/>
+		</property>
+	</bean>
+</beans>

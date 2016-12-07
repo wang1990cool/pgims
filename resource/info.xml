@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 通知公告 -->
+	<package name="INFO" extends="base">
+    	<action name="info*" class="edu.ahut.act.InfoAction" method="{1}">
+			<result name="page" type="dispatcher">
+				/WEB-INF/content/info/Info.jsp
+			</result>
+			<result name="success" type="json">
+ 				<param name="includeProperties">success,result.*</param>
+			</result>
+		</action>
+	</package>
+</struts>	

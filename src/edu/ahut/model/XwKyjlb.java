@@ -1,0 +1,451 @@
+package edu.ahut.model;
+
+import java.util.Date;
+
+
+
+/**
+ * XwKyjlb entity. @author MyEclipse Persistence Tools
+ */
+
+public class XwKyjlb  implements java.io.Serializable {
+
+
+    // Fields    
+
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	 private Long id;
+     private String xn;
+     private String xq;
+     private String xh;
+     private String cglxm;
+     private String cglx;
+     
+     private String kyuuid;
+     private String hjcgmc;
+     private String hjrq;
+     private String kjjlbm;
+     private String kjjlb;
+     private String jldjm;
+     
+     private String jldj;
+     private String jlpzh;
+     private String bjdw;
+     private String hjmd;
+     private Long brpm;
+     private String xmlym;
+     
+     private String xmly;
+     private String lrrgh;
+     private String lrr;
+     private String lrip;
+     private Date lrsj;
+     private String ztm;
+     
+     private String zt;
+     private String bz;
+     private String shrgh;
+     private String shr;
+     private Date shsj;
+     private String shyj;
+     
+     private String ship;
+     private String zsrgh;
+     private String zsr;
+     private Date zssj;
+     private String zsyj;
+     private String zsip;
+     
+     private String shjgm;
+     private String shjg;
+
+
+    // Constructors
+
+    /** default constructor */
+    public XwKyjlb() {
+    }
+
+	/** minimal constructor */
+    public XwKyjlb(String xn, String xq, String xh, String cglxm, String cglx, String kyuuid, String hjcgmc, String hjrq, String kjjlbm, String kjjlb, String jldjm, String jldj, String bjdw, String hjmd, Long brpm, String xmlym, String xmly, String ztm, String zt) {
+        this.xn = xn;
+        this.xq = xq;
+        this.xh = xh;
+        this.cglxm = cglxm;
+        this.cglx = cglx;
+        this.kyuuid = kyuuid;
+        this.hjcgmc = hjcgmc;
+        this.hjrq = hjrq;
+        this.kjjlbm = kjjlbm;
+        this.kjjlb = kjjlb;
+        this.jldjm = jldjm;
+        this.jldj = jldj;
+        this.bjdw = bjdw;
+        this.hjmd = hjmd;
+        this.brpm = brpm;
+        this.xmlym = xmlym;
+        this.xmly = xmly;
+        this.ztm = ztm;
+        this.zt = zt;
+    }
+    
+    /** full constructor */
+    public XwKyjlb(String xn, String xq, String xh, String cglxm, String cglx, String kyuuid, String hjcgmc, String hjrq, String kjjlbm, String kjjlb, String jldjm, String jldj, String jlpzh, String bjdw, String hjmd, Long brpm, String xmlym, String xmly, String lrrgh, String lrr, String lrip, Date lrsj, String ztm, String zt, String bz, String shrgh, String shr, Date shsj, String shyj, String ship, String zsrgh, String zsr, Date zssj, String zsyj, String zsip, String shjgm, String shjg) {
+        this.xn = xn;
+        this.xq = xq;
+        this.xh = xh;
+        this.cglxm = cglxm;
+        this.cglx = cglx;
+        this.kyuuid = kyuuid;
+        this.hjcgmc = hjcgmc;
+        this.hjrq = hjrq;
+        this.kjjlbm = kjjlbm;
+        this.kjjlb = kjjlb;
+        this.jldjm = jldjm;
+        this.jldj = jldj;
+        this.jlpzh = jlpzh;
+        this.bjdw = bjdw;
+        this.hjmd = hjmd;
+        this.brpm = brpm;
+        this.xmlym = xmlym;
+        this.xmly = xmly;
+        this.lrrgh = lrrgh;
+        this.lrr = lrr;
+        this.lrip = lrip;
+        this.lrsj = lrsj;
+        this.ztm = ztm;
+        this.zt = zt;
+        this.bz = bz;
+        this.shrgh = shrgh;
+        this.shr = shr;
+        this.shsj = shsj;
+        this.shyj = shyj;
+        this.ship = ship;
+        this.zsrgh = zsrgh;
+        this.zsr = zsr;
+        this.zssj = zssj;
+        this.zsyj = zsyj;
+        this.zsip = zsip;
+        this.shjgm = shjgm;
+        this.shjg = shjg;
+    }
+
+   
+    // Property accessors
+
+    public Long getId() {
+        return this.id;
+    }
+    
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getXn() {
+        return this.xn;
+    }
+    
+    public void setXn(String xn) {
+        this.xn = xn;
+    }
+
+    public String getXq() {
+        return this.xq;
+    }
+    
+    public void setXq(String xq) {
+        this.xq = xq;
+    }
+
+    public String getXh() {
+        return this.xh;
+    }
+    
+    public void setXh(String xh) {
+        this.xh = xh;
+    }
+
+    public String getCglxm() {
+        return this.cglxm;
+    }
+    
+    public void setCglxm(String cglxm) {
+        this.cglxm = cglxm;
+    }
+
+    public String getCglx() {
+        return this.cglx;
+    }
+    
+    public void setCglx(String cglx) {
+        this.cglx = cglx;
+    }
+
+    public String getKyuuid() {
+        return this.kyuuid;
+    }
+    
+    public void setKyuuid(String kyuuid) {
+        this.kyuuid = kyuuid;
+    }
+
+    public String getHjcgmc() {
+        return this.hjcgmc;
+    }
+    
+    public void setHjcgmc(String hjcgmc) {
+        this.hjcgmc = hjcgmc;
+    }
+
+    public String getHjrq() {
+        return this.hjrq;
+    }
+    
+    public void setHjrq(String hjrq) {
+        this.hjrq = hjrq;
+    }
+
+    public String getKjjlbm() {
+        return this.kjjlbm;
+    }
+    
+    public void setKjjlbm(String kjjlbm) {
+        this.kjjlbm = kjjlbm;
+    }
+
+    public String getKjjlb() {
+        return this.kjjlb;
+    }
+    
+    public void setKjjlb(String kjjlb) {
+        this.kjjlb = kjjlb;
+    }
+
+    public String getJldjm() {
+        return this.jldjm;
+    }
+    
+    public void setJldjm(String jldjm) {
+        this.jldjm = jldjm;
+    }
+
+    public String getJldj() {
+        return this.jldj;
+    }
+    
+    public void setJldj(String jldj) {
+        this.jldj = jldj;
+    }
+
+    public String getJlpzh() {
+        return this.jlpzh;
+    }
+    
+    public void setJlpzh(String jlpzh) {
+        this.jlpzh = jlpzh;
+    }
+
+    public String getBjdw() {
+        return this.bjdw;
+    }
+    
+    public void setBjdw(String bjdw) {
+        this.bjdw = bjdw;
+    }
+
+    public String getHjmd() {
+        return this.hjmd;
+    }
+    
+    public void setHjmd(String hjmd) {
+        this.hjmd = hjmd;
+    }
+
+    public Long getBrpm() {
+        return this.brpm;
+    }
+    
+    public void setBrpm(Long brpm) {
+        this.brpm = brpm;
+    }
+
+    public String getXmlym() {
+        return this.xmlym;
+    }
+    
+    public void setXmlym(String xmlym) {
+        this.xmlym = xmlym;
+    }
+
+    public String getXmly() {
+        return this.xmly;
+    }
+    
+    public void setXmly(String xmly) {
+        this.xmly = xmly;
+    }
+
+    public String getLrrgh() {
+        return this.lrrgh;
+    }
+    
+    public void setLrrgh(String lrrgh) {
+        this.lrrgh = lrrgh;
+    }
+
+    public String getLrr() {
+        return this.lrr;
+    }
+    
+    public void setLrr(String lrr) {
+        this.lrr = lrr;
+    }
+
+    public String getLrip() {
+        return this.lrip;
+    }
+    
+    public void setLrip(String lrip) {
+        this.lrip = lrip;
+    }
+
+    public Date getLrsj() {
+        return this.lrsj;
+    }
+    
+    public void setLrsj(Date lrsj) {
+        this.lrsj = lrsj;
+    }
+
+    public String getZtm() {
+        return this.ztm;
+    }
+    
+    public void setZtm(String ztm) {
+        this.ztm = ztm;
+    }
+
+    public String getZt() {
+        return this.zt;
+    }
+    
+    public void setZt(String zt) {
+        this.zt = zt;
+    }
+
+    public String getBz() {
+        return this.bz;
+    }
+    
+    public void setBz(String bz) {
+        this.bz = bz;
+    }
+
+    public String getShrgh() {
+        return this.shrgh;
+    }
+    
+    public void setShrgh(String shrgh) {
+        this.shrgh = shrgh;
+    }
+
+    public String getShr() {
+        return this.shr;
+    }
+    
+    public void setShr(String shr) {
+        this.shr = shr;
+    }
+
+    public Date getShsj() {
+        return this.shsj;
+    }
+    
+    public void setShsj(Date shsj) {
+        this.shsj = shsj;
+    }
+
+    public String getShyj() {
+        return this.shyj;
+    }
+    
+    public void setShyj(String shyj) {
+        this.shyj = shyj;
+    }
+
+    public String getShip() {
+        return this.ship;
+    }
+    
+    public void setShip(String ship) {
+        this.ship = ship;
+    }
+
+    public String getZsrgh() {
+        return this.zsrgh;
+    }
+    
+    public void setZsrgh(String zsrgh) {
+        this.zsrgh = zsrgh;
+    }
+
+    public String getZsr() {
+        return this.zsr;
+    }
+    
+    public void setZsr(String zsr) {
+        this.zsr = zsr;
+    }
+
+    public Date getZssj() {
+        return this.zssj;
+    }
+    
+    public void setZssj(Date zssj) {
+        this.zssj = zssj;
+    }
+
+    public String getZsyj() {
+        return this.zsyj;
+    }
+    
+    public void setZsyj(String zsyj) {
+        this.zsyj = zsyj;
+    }
+
+    public String getZsip() {
+        return this.zsip;
+    }
+    
+    public void setZsip(String zsip) {
+        this.zsip = zsip;
+    }
+
+    public String getShjgm() {
+        return this.shjgm;
+    }
+    
+    public void setShjgm(String shjgm) {
+        this.shjgm = shjgm;
+    }
+
+    public String getShjg() {
+        return this.shjg;
+    }
+    
+    public void setShjg(String shjg) {
+        this.shjg = shjg;
+    }
+   
+
+
+
+
+
+
+
+
+}

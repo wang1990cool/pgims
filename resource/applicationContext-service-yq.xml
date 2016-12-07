@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<!-- 成绩提交时间 -->
+	<bean id="JxCjtjsjbServiceImpl" class="edu.ahut.service.impl.JxCjtjsjbServiceImpl">
+		<property name="jxCjtjsjbDao">
+			<ref bean="JxCjtjsjbDAO"/>
+		</property>
+	</bean>
+	
+	<!-- 成绩记录 -->
+	<bean id="JxCjjlbServiceImpl" class="edu.ahut.service.impl.JxCjjlbServiceImpl">
+		<property name="jxCjjlbDao">
+			<ref bean="JxCjjlbDAO"/>
+		</property>
+	</bean>
+	
+	<!-- 成绩明细 -->
+	<bean id="JxCjmxbServiceImpl" class="edu.ahut.service.impl.JxCjmxbServiceImpl">
+		<property name="jxCjmxbDao">
+			<ref bean="JxCjmxbDAO"/>
+		</property>
+		<property name="xsJcxxbDao">   
+          <ref bean="XsJcxxbDAO" />   
+       </property>
+	</bean>
+	
+	<bean id="CjlrServiceImpl" class="edu.ahut.service.impl.CjlrServiceImpl">
+		<property name="jxCjjlbDao">
+			<ref bean="JxCjjlbDAO"/>
+		</property>
+		<property name="jxSkxxbDao">   
+            <ref bean="JxSkxxbDAO" />   
+       	</property>
+		<property name="jxCjmxbDao">
+			<ref bean="JxCjmxbDAO"/>
+		</property>
+		<property name="zdCjdjmDao">   
+          <ref bean="ZdCjdjmDAO" />   
+       	</property>
+       	<property name="zdKsxzmDao">   
+          <ref bean="ZdKsxzmDAO" />   
+       	</property>
+        <property name="viewJxCjmxbDao">   
+          <ref bean="ViewJxCjmxbDAO" />   
+       </property>
+	</bean>
+	
+	<bean id="TyXnbServiceImpl" class="edu.ahut.service.impl.TyXnbServiceImpl">
+  	   <property name="tyXnbDao">   
+          <ref bean="TyXnbDAO" />   
+       </property>
+	</bean>	
+	
+	<bean id="ZdCjdjmServiceImpl" class="edu.ahut.service.impl.ZdCjdjmServiceImpl">
+  	   <property name="zdCjdjmDao">   
+          <ref bean="ZdCjdjmDAO" />   
+       </property>
+	</bean>	
+	
+	<bean id="ZdKsxzmServiceImpl" class="edu.ahut.service.impl.ZdKsxzmServiceImpl">
+  	   <property name="zdKsxzmDao">   
+          <ref bean="ZdKsxzmDAO" />   
+       </property>
+	</bean>	
+	
+	<bean id="ViewJxCjlrServiceImpl" class="edu.ahut.service.impl.ViewJxCjlrServiceImpl">
+  	   <property name="viewJxCjlrDao">   
+          <ref bean="ViewJxCjlrDAO" />   
+       </property>
+	</bean>	
+	
+	<bean id="ViewJxCjjlztServiceImpl" class="edu.ahut.service.impl.ViewJxCjjlztServiceImpl">
+  	   <property name="viewJxCjjlztDao">   
+          <ref bean="ViewJxCjjlztDAO" />   
+       </property>
+	</bean>	
+	
+	<bean id="ViewJxCjmxbServiceImpl" class="edu.ahut.service.impl.ViewJxCjmxbServiceImpl">
+  	   <property name="viewJxCjmxbDao">   
+          <ref bean="ViewJxCjmxbDAO" />   
+       </property>
+	</bean>	
+	
+	<bean id="JxrwServiceImpl" class="edu.ahut.service.impl.JxrwServiceImpl">
+       	<property name="viewPkJxrwDao">   
+            <ref bean="ViewPkJxrwDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="PsdmServiceImpl" class="edu.ahut.service.impl.PsdmServiceImpl">
+       	<property name="viewJxXsxkallDao">   
+            <ref bean="ViewJxXsxkallDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="XwZqkhbServiceImpl" class="edu.ahut.service.impl.XwZqkhbServiceImpl">
+       	<property name="xwZqkhbDao">   
+            <ref bean="XwZqkhbDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="ViewXwZqkhServiceImpl" class="edu.ahut.service.impl.ViewXwZqkhServiceImpl">
+       	<property name="viewXwZqkhDao">   
+            <ref bean="ViewXwZqkhDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="XwZqkhzlbServiceImpl" class="edu.ahut.service.impl.XwZqkhzlbServiceImpl">
+       	<property name="xwZqkhzlbDao">   
+            <ref bean="XwZqkhzlbDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="ViewJxCjcxAllServiceImpl" class="edu.ahut.service.impl.ViewJxCjcxAllServiceImpl">
+ 	  	<property name="viewJxCjcxAllDao">   
+            <ref bean="ViewJxCjcxAllDAO" />  
+       </property>
+	</bean>
+	
+	<bean id="CjdyServiceImpl" class="edu.ahut.service.impl.CjdyServiceImpl">
+       	<property name="viewJxCjcxAllDao">   
+            <ref bean="ViewJxCjcxAllDAO" />   
+       	</property>
+	</bean>
+	
+	<!-- 迎新新生基本信息 -->
+	<bean id="YxXsjbxxbServiceImpl" class="edu.ahut.service.impl.YxXsjbxxbServiceImpl">
+       	<property name="yxXsjbxxbDao">   
+            <ref bean="YxXsjbxxbDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="YxXsjbxxbHServiceImpl" class="edu.ahut.service.impl.YxXsjbxxbHServiceImpl">
+       	<property name="yxXsjbxxbHDao">   
+            <ref bean="YxXsjbxxbHDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="ViewYxCwServiceImpl" class="edu.ahut.service.impl.ViewYxCwServiceImpl">
+       	<property name="viewYxCwDao">   
+            <ref bean="ViewYxCwDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="ViewYxBdqkServiceImpl" class="edu.ahut.service.impl.ViewYxBdqkServiceImpl">
+       	<property name="viewYxBdqkDao">   
+            <ref bean="ViewYxBdqkDAO" />   
+       	</property>
+	</bean>
+	
+	<bean id="ViewYxJfqkAllServiceImpl" class="edu.ahut.service.impl.ViewYxJfqkAllServiceImpl">
+       	<property name="viewYxJfqkAllDao">   
+            <ref bean="ViewYxJfqkAllDAO" />   
+       	</property>
+	</bean>
+	
+	<!-- 迎新时间控制表 -->
+	<bean id="YxSjkzbServiceImpl" class="edu.ahut.service.impl.YxSjkzbServiceImpl">
+		<property name="yxSjkzbDao">
+			<ref bean="YxSjkzbDAO"/>
+		</property>
+	</bean>
+	
+	</beans>
+	

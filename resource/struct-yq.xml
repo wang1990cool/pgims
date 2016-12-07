@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="yq" extends="json-default">
+		<!-- 成绩录入 -->
+   		<action name="jxCjtjsj*" class="edu.ahut.act.JxCjtjsjbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="jxCjjl*" class="edu.ahut.act.JxCjjlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="jxCjmx*" class="edu.ahut.act.JxCjmxbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		<action name="cjlr*" class="edu.ahut.act.CjlrAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pdf" type="json">
+				<param name="contentType">text/html;charset=utf-8</param>
+			    <param name="ignoreHierarchy">false</param> 
+				<param name="includeProperties">success,msg</param>
+			</result>
+		</action>
+        <action name="viewJxCjjlzt*" class="edu.ahut.act.ViewJxCjjlztAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+        
+        <action name="viewJxCjll*" class="edu.ahut.act.ViewJxCjllAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="viewJxCjmxb*" class="edu.ahut.act.ViewJxCjmxbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="jxrw*" class="edu.ahut.act.JxrwAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pdf" type="json">
+				<param name="contentType">text/html;charset=utf-8</param>
+			    <param name="ignoreHierarchy">false</param> 
+				<param name="includeProperties">success,msg</param>
+			</result>
+		</action>
+		
+		<action name="psdm*" class="edu.ahut.act.PsdmAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pdf" type="json">
+				<param name="contentType">text/html;charset=utf-8</param>
+			    <param name="ignoreHierarchy">false</param> 
+				<param name="includeProperties">success,msg</param>
+			</result>
+		</action>
+		
+		 <action name="zqkh*" class="edu.ahut.act.XwZqkhbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		 <action name="viewxwzqkh*" class="edu.ahut.act.ViewXwZqkhAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		 <action name="zlzqkh*" class="edu.ahut.act.XwZqkhzlbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pfileDownloadZqkh" type="chain">pfileDownloadZqkh</result>
+		</action>
+		
+		<action name="cjdy*" class="edu.ahut.act.CjdyAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pdf" type="json">
+				<param name="contentType">text/html;charset=utf-8</param>
+			    <param name="ignoreHierarchy">false</param> 
+				<param name="includeProperties">success,msg</param>
+			</result>
+		</action>
+		
+		 <action name="cjcxAll*" class="edu.ahut.act.ViewJxCjcxAllAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		
+		<!-- 迎新新生基本信息 -->
+		<action name="yxXsjbxx*" class="edu.ahut.act.YxXsjbxxbAction" method="{1}">
+			 <result name="list" type="json">
+                <param name="root">result</param> 
+			</result>
+			<result name="success" type="json">
+				<param name="includeProperties">success,result.*</param>
+				<!-- <param name="includeProperties">result.*</param> -->
+			</result>
+			<result name="pfileUpExcelData" type="chain">pfileUpExcelData</result>
+			<result name="pfileUpZp" type="chain">pfileUpZp</result>
+			<result name="pfileDownloadZp" type="chain">pfileDownloadZp</result>
+			
+		</action>
+		
+		<action name="lsXsjbxx*" class="edu.ahut.act.YxXsjbxxbHAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pfileUpExcel" type="chain">pfileUpExcel</result>
+		</action> 
+		
+		<action name="yxSjkz*" class="edu.ahut.act.YxSjkzbAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="viewYxCw*" class="edu.ahut.act.ViewYxCwAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+			<result name="pdf" type="json">
+				<param name="contentType">text/html;charset=utf-8</param>
+			    <param name="ignoreHierarchy">false</param> 
+				<param name="includeProperties">success,msg</param>
+			</result>
+		</action>
+		
+		
+		<action name="viewYxBdqk*" class="edu.ahut.act.ViewYxBdqkAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		<action name="viewYxJfqkAll*" class="edu.ahut.act.ViewYxJfqkAllAction" method="{1}">
+			<result name="success" type="json">
+				<param name="includeProperties">result.*</param>
+			</result>
+		</action>
+		
+		
+		
+	</package>
+</struts>	

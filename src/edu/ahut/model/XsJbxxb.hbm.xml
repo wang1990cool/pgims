@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.ahut.model.XsJbxxb" table="XS_JBXXB" schema="PGDB">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" precision="0" />
+            <generator class="sequence">  
+                <param name="sequence">XS_JBXXB_ID</param>  
+            </generator>                             
+        </id>
+        <property name="xh" type="string">
+            <column name="XH" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="xm" type="string">
+            <column name="XM" length="40" not-null="true" />
+        </property>
+        <property name="xmpy" type="string">
+            <column name="XMPY" length="80" />
+        </property>
+        <property name="cym" type="string">
+            <column name="CYM" length="40" />
+        </property>
+        <property name="xbm" type="string">
+            <column name="XBM" length="1" />
+        </property>
+        <property name="xb" type="string">
+            <column name="XB" length="10" />
+        </property>
+        <property name="gbm" type="string">
+            <column name="GBM" length="3" />
+        </property>
+        <property name="gb" type="string">
+            <column name="GB" length="40" />
+        </property>
+        <property name="mzm" type="string">
+            <column name="MZM" length="2" />
+        </property>
+        <property name="mz" type="string">
+            <column name="MZ" length="20" />
+        </property>
+        <property name="zzmmm" type="string">
+            <column name="ZZMMM" length="2" />
+        </property>
+        <property name="zzmm" type="string">
+            <column name="ZZMM" length="20" />
+        </property>
+        <property name="csrq" type="string">
+            <column name="CSRQ" length="8" />
+        </property>
+        <property name="csdm" type="string">
+            <column name="CSDM" length="6" />
+        </property>
+        <property name="csd" type="string">
+            <column name="CSD" length="100" />
+        </property>
+        <property name="jgdm" type="string">
+            <column name="JGDM" length="6" />
+        </property>
+        <property name="jgd" type="string">
+            <column name="JGD" length="100" />
+        </property>
+        <property name="zjlxm" type="string">
+            <column name="ZJLXM" length="2" />
+        </property>
+        <property name="zjlx" type="string">
+            <column name="ZJLX" length="10" />
+        </property>
+        <property name="zjhm" type="string">
+            <column name="ZJHM" length="20" />
+        </property>
+        <property name="hyzkm" type="string">
+            <column name="HYZKM" length="1" />
+        </property>
+        <property name="hyzk" type="string">
+            <column name="HYZK" length="10" />
+        </property>
+        <property name="ksh" type="string">
+            <column name="KSH" length="20" />
+        </property>
+        <property name="rxzp" type="org.springframework.orm.hibernate3.support.BlobByteArrayType">
+            <column name="RXZP" length="4000"/>
+        </property>
+        <property name="byzp" type="org.springframework.orm.hibernate3.support.BlobByteArrayType">
+            <column name="BYZP" length="4000"/>
+        </property>
+        <property name="hkszssm" type="string">
+            <column name="HKSZSSM" length="2" />
+        </property>
+        <property name="hkszss" type="string">
+            <column name="HKSZSS" length="40" />
+        </property>
+        <property name="gxsj" type="timestamp">
+            <column name="GXSJ" length="7" />
+        </property>
+        <property name="sjzt" type="string">
+            <column name="SJZT" length="1" />
+        </property>
+        <property name="bz" type="string">
+            <column name="BZ" length="200" />
+        </property>
+        <property name="sfyx" type="string">
+            <column name="SFYX" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

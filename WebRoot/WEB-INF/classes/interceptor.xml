@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="base" extends="json-default" abstract="true">
+	    <interceptors>
+            <interceptor name="AuthorizationInterceptor"
+                class="edu.ahut.util.AuthorizationInterceptor"></interceptor>
+            <interceptor-stack name="authorizationStack">
+                <interceptor-ref name="AuthorizationInterceptor">
+                    <param name="ignoreActions">
+                        imgVerifyCode,reg*.*,index.*,login.*,file*.*,connector
+                    </param>
+                </interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="authorizationStack"></default-interceptor-ref>
+         <global-results>
+         	<result name="login" type="dispatcher">/WEB-INF/common/AuthorizationFail.jsp</result>
+        </global-results>
+    </package>
+</struts>

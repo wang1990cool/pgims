@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="dataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+		<property name="alias" value="spring-proxool" />
+		<property name="driver">
+			<value>${jdbc.default.driverClassName}</value>
+		</property>
+		<property name="driverUrl">
+			<value>${jdbc.default.url}</value>
+		</property>
+		<property name="user" value="${jdbc.default.username}" />
+		<property name="password" value="${jdbc.default.password}"></property>
+		<property name="prototypeCount">
+			<value>5</value>
+		</property>
+		<property name="maximumConnectionCount" value="${proxool.maximumConnectionCount}" />
+		<property name="minimumConnectionCount" value="${proxool.minimumConnectionCount}" />
+		<property name="houseKeepingTestSql" value="${proxool.houseKeepingTestSql}" />
+		<property name="trace">
+			<value>true</value>
+		</property>
+		<property name="verbose">
+			<value>true</value>
+		</property>
+	</bean>
+</beans>

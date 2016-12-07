@@ -1,0 +1,11 @@
+Ext.define('App.model.skxx.ViewSkxxmxModel',{
+	extend:'Ext.data.Model',
+	fields:[
+		{name:'id'},{name:'kch'},{name:'kcmc'},{name:'ggkbzm'},
+		{name:'kkjhh'},{name:'ggkbz'},{name:'xn'},{name:'xq'},
+		{name:'jhrs'},{name:'llxs'},{name:'syxs'},{name:'zxs'},
+		{name:'ksz'},{name:'jsz'},{name:'qzz'},{name:'xslxm'},
+		{name:'xslx'},{name:'xkzym'},{name:'xkzy'},{name:'mzxs'},
+		{name:'pydwh'},{name:'pydw'},{name:'kkdwh'},{name:'kkdw'},{name:'kcxf'}
+	]
+})

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="edu.ahut.model.WebRole" table="WEBROLE" catalog="PGDB">
+  		<id name="roleCode" type="java.lang.String">
+   			<column name="ROLECODE"/>
+   			<generator class="assigned"/>
+  		</id>
+  		<property generated="never" lazy="false" name="roleName" type="java.lang.String">
+   			<column name="ROLENAME"/>
+  		</property>
+  		<property generated="never" lazy="false" name="memo" type="java.lang.String">
+   			<column name="MEMO"/>
+  		</property>
+  		<bag name="webMenus" table="WEBRM"  lazy="false" order-by="MENUID ASC" cascade="save-update">
+			<key column="ROLECODE" />
+			<many-to-many class="edu.ahut.model.WebMenu" column="MENUID"/>
+  		</bag>
+  		
+  		<bag name="webRights" table="WEBRR"  lazy="false" order-by="RIGHTCODE ASC" cascade="save-update">
+			<key column="ROLECODE" />
+			<many-to-many class="edu.ahut.model.WebRight" column="RIGHTCODE"/>
+  		</bag>
+ 	</class>
+</hibernate-mapping>

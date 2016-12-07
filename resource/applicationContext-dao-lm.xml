@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	  <bean id="WebUserDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.WebUser</value>  
+   	    </constructor-arg>  
+    </bean>
+    	
+    <bean id="WebMenuDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.WebMenu</value>  
+   	    </constructor-arg>  
+    </bean>
+	
+	<bean id="WebRoleDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.WebRole</value>  
+   	    </constructor-arg>  
+    </bean>
+	
+	<bean id="WebInfoDAO" parent="baseDAO">  
+  	    <constructor-arg>  
+       		<value>edu.ahut.model.WebInfo</value>  
+   	    </constructor-arg>  
+    </bean>
+</beans>

@@ -1,0 +1,18 @@
+package edu.ahut.service;
+
+import java.util.List;
+
+import edu.ahut.dao.support.Page;
+import edu.ahut.model.ZdKsxzm;
+
+public interface ZdKsxzmService {
+	public List<ZdKsxzm> Query(String filters, String orders, Object... values);
+	
+	public Page<ZdKsxzm> pageQuery(int startNo, int pageSize,String filters, String orders, Object... values);
+	
+	public List<?> getAll();
+	
+	public boolean hqlExecute(String hql, Object...values);
+	
+	public List<ZdKsxzm> hqlQuery(String hql, Object...values);
+}

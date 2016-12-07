@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="ViewJxXsxkallServiceImpl" class="edu.ahut.service.impl.ViewJxXsxkallServiceImpl">
+ 	   <property name="viewJxXsxkallDao">   
+          <ref bean="ViewJxXsxkallDAO" />   
+       </property>
+	</bean>
+	<bean id="ViewXwKtbgsqServiceImpl" class="edu.ahut.service.impl.ViewXwKtbgsqServiceImpl">
+ 	   <property name="viewXwKtbgsqDao">   
+          <ref bean="ViewXwKtbgsqDAO" />   
+       </property>
+	</bean>
+	<bean id="XwKtbgsqbServiceImpl" class="edu.ahut.service.impl.XwKtbgsqbServiceImpl">
+ 	   <property name="xwKtbgsqbDao">   
+          <ref bean="XwKtbgsqbDAO" />   
+       </property>
+	</bean>
+	<bean id="XwKtbgzbServiceImpl" class="edu.ahut.service.impl.XwKtbgzbServiceImpl">
+  	   <property name="xwKtbgzbDao">   
+          <ref bean="XwKtbgzbDAO" />   
+       </property>
+	</bean>	
+	<bean id="XwKtbgzlbServiceImpl" class="edu.ahut.service.impl.XwKtbgzlbServiceImpl">
+  	   <property name="xwKtbgzlbDao">   
+          <ref bean="XwKtbgzlbDAO" />   
+       </property>
+	</bean>	
+	<bean id="ViewXwKtbgzlzbServiceImpl" class="edu.ahut.service.impl.ViewXwKtbgzlzbServiceImpl">
+  	   <property name="viewXwKtbgzlzbDao">   
+          <ref bean="ViewXwKtbgzlzbDAO" />   
+       </property>
+	</bean>	
+	
+	<bean id="JxKtbgsjbServiceImpl" class="edu.ahut.service.impl.JxKtbgsjbServiceImpl">
+  	   <property name="jxKtbgsjbDao">   
+          <ref bean="JxKtbgsjbDAO" />   
+       </property>
+	</bean>
+	
+	<bean id="JxZqkhsjbServiceImpl" class="edu.ahut.service.impl.JxZqkhsjbServiceImpl">
+  	   <property name="jxZqkhsjbDao">   
+          <ref bean="JxZqkhsjbDAO" />   
+       </property>
+	</bean>
+	
+	
+ <bean id="XwKyjlbServiceImpl" class="edu.ahut.service.impl.XwKyjlbServiceImpl">
+  	   <property name="xwKyjlbDao">   
+          <ref bean="XwKyjlbDAO" />   
+       </property>
+	</bean>
+	 <bean id="XwKyjlzlbServiceImpl" class="edu.ahut.service.impl.XwKyjlzlbServiceImpl">
+  	   <property name="xwKyjlzlbDao">   
+          <ref bean="XwKyjlzlbDAO" />   
+       </property>
+	</bean>
+ <bean id="ViewXwKyjlbServiceImpl" class="edu.ahut.service.impl.ViewXwKyjlbServiceImpl">
+  	   <property name="viewXwKyjlbDao">   
+          <ref bean="ViewXwKyjlbDAO" />   
+       </property>
+	</bean> 
+
+<bean id="XwKylwbServiceImpl" class="edu.ahut.service.impl.XwKylwbServiceImpl">
+  	   <property name="xwKylwbDao">   
+          <ref bean="XwKylwbDAO" />   
+       </property>
+	</bean>
+	<bean id="XwKylwzlbServiceImpl" class="edu.ahut.service.impl.XwKylwzlbServiceImpl">
+  	   <property name="xwKylwzlbDao">   
+          <ref bean="XwKylwzlbDAO" />   
+       </property>
+	</bean>
+	<bean id="ViewXwKylwzbServiceImpl" class="edu.ahut.service.impl.ViewXwKylwzbServiceImpl">
+  	   <property name="viewXwKylwzbDao">   
+          <ref bean="ViewXwKylwzbDAO" />   
+       </property>
+	</bean>
+
+<bean id="XwKyzlbServiceImpl" class="edu.ahut.service.impl.XwKyzlbServiceImpl">
+  	   <property name="xwKyzlbDao">   
+          <ref bean="XwKyzlbDAO" />   
+       </property>
+	</bean>
+	 <bean id="XwKyzlzlbServiceImpl" class="edu.ahut.service.impl.XwKyzlzlbServiceImpl">
+  	   <property name="xwKyzlzlbDao">   
+          <ref bean="XwKyzlzlbDAO" />   
+       </property>
+	</bean>
+ <bean id="ViewXwKyzlbServiceImpl" class="edu.ahut.service.impl.ViewXwKyzlbServiceImpl">
+  	   <property name="viewXwKyzlbDao">   
+          <ref bean="ViewXwKyzlbDAO" />   
+       </property>
+	</bean> 
+<bean id="ViewXwKyzzbServiceImpl" class="edu.ahut.service.impl.ViewXwKyzzbServiceImpl">
+  	   <property name="viewXwKyzzbDao">   
+          <ref bean="ViewXwKyzzbDAO" />   
+       </property>
+	</bean>
+	<bean id="XwKyzzbServiceImpl" class="edu.ahut.service.impl.XwKyzzbServiceImpl">
+  	   <property name="xwKyzzbDao">   
+          <ref bean="XwKyzzbDAO" />   
+       </property>
+	</bean>
+	<bean id="XwKyzzzlbServiceImpl" class="edu.ahut.service.impl.XwKyzzzlbServiceImpl">
+  	   <property name="xwKyzzzlbDao">   
+          <ref bean="XwKyzzzlbDAO" />   
+       </property>
+	</bean>
+	
+	<bean id="ViewXwKyxmbServiceImpl" class="edu.ahut.service.impl.ViewXwKyxmbServiceImpl">
+  	   <property name="viewXwKyxmbDao">   
+          <ref bean="ViewXwKyxmbDAO" />   
+       </property>
+	</bean>
+	<bean id="XwKyxmbServiceImpl" class="edu.ahut.service.impl.XwKyxmbServiceImpl">
+  	   <property name="xwKyxmbDao">   
+          <ref bean="XwKyxmbDAO" />   
+       </property>
+	</bean>
+</beans>

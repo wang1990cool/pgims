@@ -1,0 +1,11 @@
+Ext.define('App.model.pyfa.FAKCModel',{
+	extend:'Ext.data.Model',
+	fields:[{name:'num'},
+		{name:'id'},{name:'bbh'},{name:'pyfah'},{name:'pyfamc'},{name:'kch'},{name:'kcmc'},{name:'kclbm'},
+		{name:'kclb'},{name:'kcxzm'},{name:'kcxz'},{name:'kcsxm'},{name:'kcsx'},
+		{name:'kcxf'},{name:'xslxm'},{name:'xslx'},{name:'zxs'},{name:'llxs'},
+		{name:'syxs'},{name:'ksxsm'},{name:'ksxs'},{name:'kkxq'},{name:'kkdwh'},{name:'dwmc'},
+	    {name:'sfyx'},{name:'bz'},
+		{name:'mzxs'},{name:'ggkbz'},{name:'ggkbzm'}
+	]
+})

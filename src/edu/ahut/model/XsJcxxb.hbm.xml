@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.ahut.model.XsJcxxb" table="XS_JCXXB" schema="PGDB">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" precision="38" scale="0" />
+            <generator class="sequence">  
+                <param name="sequence">XS_JCXXB_ID</param>  
+            </generator> 
+        </id>
+        <property name="xh" type="string">
+            <column name="XH" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="xm" type="string">
+            <column name="XM" length="60" />
+        </property>
+        <property name="xmpy" type="string">
+            <column name="XMPY" length="100" />
+        </property>
+        <property name="xbm" type="string">
+            <column name="XBM" length="1" />
+        </property>
+        <property name="xb" type="string">
+            <column name="XB" length="10" />
+        </property>
+        <property name="gjdqm" type="string">
+            <column name="GJDQM" length="3" />
+        </property>
+        <property name="gjdqmc" type="string">
+            <column name="GJDQMC" length="60" />
+        </property>
+        <property name="mzm" type="string">
+            <column name="MZM" length="2" />
+        </property>
+        <property name="mz" type="string">
+            <column name="MZ" length="60" />
+        </property>
+        <property name="zzmmm" type="string">
+            <column name="ZZMMM" length="2" />
+        </property>
+        <property name="zzmm" type="string">
+            <column name="ZZMM" length="20" />
+        </property>
+        <property name="csrq" type="string">
+            <column name="CSRQ" length="8" />
+        </property>
+        <property name="csdm" type="string">
+            <column name="CSDM" length="10" />
+        </property>
+        <property name="csd" type="string">
+            <column name="CSD" length="100" />
+        </property>
+        <property name="jgdm" type="string">
+            <column name="JGDM" length="10" />
+        </property>
+        <property name="jgd" type="string">
+            <column name="JGD" length="100" />
+        </property>
+        <property name="zjlxm" type="string">
+            <column name="ZJLXM" length="10" />
+        </property>
+        <property name="zjlx" type="string">
+            <column name="ZJLX" length="20" />
+        </property>
+        <property name="zjhm" type="string">
+            <column name="ZJHM" length="40" />
+        </property>
+        <property name="ksh" type="string">
+            <column name="KSH" length="30" />
+        </property>
+        <property name="zkzh" type="string">
+            <column name="ZKZH" length="30" />
+        </property>
+        <property name="xslxm" type="string">
+            <column name="XSLXM" length="10" />
+        </property>
+        <property name="xslx" type="string">
+            <column name="XSLX" length="20" />
+        </property>
+        <property name="rxrq" type="string">
+            <column name="RXRQ" length="8" />
+        </property>
+        <property name="sznj" type="string">
+            <column name="SZNJ" length="4" />
+        </property>
+        <property name="yxdm" type="string">
+            <column name="YXDM" length="10" />
+        </property>
+        <property name="yxmc" type="string">
+            <column name="YXMC" length="60" />
+        </property>
+        <property name="fyh" type="string">
+            <column name="FYH" length="10" />
+        </property>
+        <property name="fymc" type="string">
+            <column name="FYMC" length="60" />
+        </property>
+        <property name="xsh" type="string">
+            <column name="XSH" length="10" />
+        </property>
+        <property name="xsmc" type="string">
+            <column name="XSMC" length="60" />
+        </property>
+        <property name="bjh" type="string">
+            <column name="BJH" length="20" />
+        </property>
+        <property name="bjmc" type="string">
+            <column name="BJMC" length="40" />
+        </property>
+        <property name="zydm" type="string">
+            <column name="ZYDM" length="10" />
+        </property>
+        <property name="zymc" type="string">
+            <column name="ZYMC" length="60" />
+        </property>
+        <property name="yjfx" type="string">
+            <column name="YJFX" length="200" />
+        </property>
+        <property name="xz" type="java.lang.Long">
+            <column name="XZ" precision="4" scale="1" />
+        </property>
+        <property name="yjbyrq" type="string">
+            <column name="YJBYRQ" length="8" />
+        </property>
+        <property name="pyccm" type="string">
+            <column name="PYCCM" length="10" />
+        </property>
+        <property name="pycc" type="string">
+            <column name="PYCC" length="20" />
+        </property>
+        <property name="jylbm" type="string">
+            <column name="JYLBM" length="10" />
+        </property>
+        <property name="jylb" type="string">
+            <column name="JYLB" length="20" />
+        </property>
+        <property name="xwlbm" type="string">
+            <column name="XWLBM" length="10" />
+        </property>
+        <property name="xwlb" type="string">
+            <column name="XWLB" length="20" />
+        </property>
+        <property name="rxfsm" type="string">
+            <column name="RXFSM" length="10" />
+        </property>
+        <property name="rxfs" type="string">
+            <column name="RXFS" length="20" />
+        </property>
+        <property name="sfbdm" type="string">
+            <column name="SFBDM" length="1" />
+        </property>
+        <property name="sfbd" type="string">
+            <column name="SFBD" length="20" />
+        </property>
+        <property name="sfzxm" type="string">
+            <column name="SFZXM" length="1" />
+        </property>
+        <property name="sfzx" type="string">
+            <column name="SFZX" length="10" />
+        </property>
+        <property name="dqztm" type="string">
+            <column name="DQZTM" length="10" />
+        </property>
+        <property name="dqzt" type="string">
+            <column name="DQZT" length="20" />
+        </property>
+        <property name="rxzp" type="org.springframework.orm.hibernate3.support.BlobByteArrayType">
+            <column name="RXZP" />
+        </property>
+        <property name="dsh" type="string">
+            <column name="DSH" length="10" />
+        </property>
+        <property name="dsxm" type="string">
+            <column name="DSXM" length="60" />
+        </property>
+        <property name="sfyx" type="string">
+            <column name="SFYX" length="1" />
+        </property>
+        <property name="hyzkm" type="string">
+            <column name="HYZKM" length="10" />
+        </property>
+        <property name="hyzk" type="string">
+            <column name="HYZK" length="20" />
+        </property>
+        <property name="bz" type="string">
+            <column name="BZ" length="1000" />
+        </property>
+    </class>
+</hibernate-mapping>
